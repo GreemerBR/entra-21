@@ -1,23 +1,23 @@
 ﻿using Entra21.ExerciciosWhile;
 
 Console.WriteLine(@"-------------MENU-------------
- 1 - Exercicio01
- 2 - Exercicio02
- 3 - Exercicio03
- 4 - Exercicio04
- 5 - Exercicio05
- 6 - Exercicio06
- 7 - Exercicio07
- 8 - Exercicio08
- 9 - Exercicio09
-10 - Exercicio10
-11 - Exercicio11
-12 - Exercicio12
-13 - Exercicio13
-14 - Exercicio14
-15 - Exercicio15
-16 - Exercicio16
-17 - Exercicio17
+ 1 - Exercício 01
+ 2 - Exercício 02
+ 3 - Exercício 03
+ 4 - Exercício 04
+ 5 - Exercício 05
+ 6 - Exercício 06
+ 7 - Exercício 07
+ 8 - Exercício 08
+ 9 - Exercício 09
+10 - Exercício 10
+11 - Exercício 11
+12 - Exercício 12
+13 - Exercício 13
+14 - Exercício 14
+15 - Exercício 15
+16 - Exercício 16
+17 - Exercício 17
 ");
 
 Console.Write("Digite a opção deseja: ");
