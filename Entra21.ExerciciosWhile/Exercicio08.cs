@@ -14,7 +14,7 @@ namespace Entra21.ExerciciosWhile
             Console.Write("Informe o número desejado: ");
             double numero = Convert.ToDouble(Console.ReadLine());
 
-            int indice = 1;
+            int indice = 0;
 
             while (indice <= 1000)
             {
