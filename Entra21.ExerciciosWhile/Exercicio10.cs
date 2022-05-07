@@ -22,7 +22,7 @@ namespace Entra21.ExerciciosWhile
 
             if (numero % 2 ==0 && numero != 0)
             {
-                Console.WriteLine("Seus 50 números antecessores pares são: ");
+                Console.WriteLine("Os 50 números pares antecessores ao " + aux + " são: ");
                 while (numero > 0 && indice < 50)
                 {
                     numero = numero - 2;
@@ -30,11 +30,11 @@ namespace Entra21.ExerciciosWhile
                     indice = indice + 1;
                 }
 
-                numero = numero - 1;
+                numero = aux - 1;
                 indice = 0;
 
-                Console.WriteLine("");
-                Console.WriteLine("E seus 50 números sucessores impares são: ");
+                Console.WriteLine("\n" +
+                    "E os 50 números impares sucessores ao " + aux + " são: ");
                 while (indice < 50)
                 {
                     numero = numero + 2;
@@ -44,10 +44,31 @@ namespace Entra21.ExerciciosWhile
 
             }
 
-            else ()
+            else
             {
+                numero = aux + 1;
 
-            }
+                Console.WriteLine("Os 50 números pares antecessores ao " + aux + " são: ");
+                while (numero > 0 && indice < 50)
+                {
+                    numero = numero - 2;
+                    Console.Write(numero + " ");
+                    indice = indice + 1;
+                }
+
+                numero = aux;
+                indice = 0;
+
+                Console.WriteLine();
+                Console.WriteLine("\n" +
+                    "E os 50 números impares sucessores ao " + aux + " são: ");
+                while (indice < 50)
+                {
+                    numero = numero + 2;
+                    Console.Write(numero + " ");
+                    indice = indice + 1;
+                }
+            }   
 
             
         }
