@@ -14,7 +14,14 @@ namespace Entra21.ExerciciosWhile
          * Ao final de o cliente solicitar os produtos, deve-se apresentar o total dos pedidos e a
          * quantidade de produtos consumidos.
          * O critério para que não seja mais solicitado o código do produto ao cliente é se o mesmo
-         * informar o código 16*/
+         * informar o código 16
+         * Ao final apresentar:
+         * ● A quantidade de bolos escolhidos;
+         * ● A quantidade de doces escolhidos;
+         * ● A quantidade de Sanduíches escolhidos;
+         * ● A quantidade de pizzas escolhidas;
+         * ● A média dos produtos;
+        */
         public void Executar()
         {
             Console.WriteLine("Bem vindo(a) a padaria do João");
@@ -28,6 +35,7 @@ namespace Entra21.ExerciciosWhile
             double total = 0.00;
             int quantidadeProdutos = 0;
             int quantidadeTotalProdutos = 0;
+            double mediaProdutos = 0.00;
 
             while (item < 15)
             {
@@ -208,6 +216,7 @@ LISTA DE PRODUTOS CONSUMIDOS");
             Console.WriteLine("Total de sanduíches consumidos: " + sanduiches);
             Console.WriteLine("Total de pizzas consumidas: " + pizzas);
             Console.WriteLine("Total de produtos consumidos: " + quantidadeTotalProdutos);
+            Console.WriteLine("O valor médio dos produtos foi de: R$ " + (total/quantidadeTotalProdutos).ToString("F"));
         }
     }
 }
