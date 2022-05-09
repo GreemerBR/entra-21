@@ -8,12 +8,11 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio11
     {
-        public void Executar()
-        {
-            /*Solicite para o usuário dois números. Apresente o seguinte menu e de acordo com a
+        /*Solicite para o usuário dois números. Apresente o seguinte menu e de acordo com a
             escolha deve ser apresentado a operação aritmética, isto deve ocorrer até que o
             mesmo escolha a opção de sair*/
-
+        public void Executar()
+        {
             Console.Write("Informe o primeiro número: ");
             double numero01 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Informe o segundo número: ");
@@ -58,7 +57,7 @@ namespace Entra21.ExerciciosWhile
                 {
                     opcaoDesejada = 0;
                 }
-                
+
             }
         }
     }
