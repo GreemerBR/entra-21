@@ -19,9 +19,9 @@ namespace Entra21.ExerciciosWhile
             Console.Write("Informe o segundo número: ");
             double numero02 = Convert.ToDouble(Console.ReadLine());
 
-            int opcaoDesejada = 6;
+            int opcaoDesejada = 0;
 
-            while (opcaoDesejada > 5)
+            while (opcaoDesejada < 5)
             {
 
                 Console.Write(@"
@@ -38,31 +38,25 @@ namespace Entra21.ExerciciosWhile
                 if (opcaoDesejada == 1)
                 {
                     Console.Write("\n" + numero01 + " + " + numero02 + " = " + (numero01 + numero02).ToString("F") + "\n");
-                    opcaoDesejada = 6;
                 }
                 else if (opcaoDesejada == 2)
                 {
                     Console.Write("\n" + numero01 + " - " + numero02 + " = " + (numero01 - numero02).ToString("F") + "\n");
-                    opcaoDesejada = 6;
                 }
                 else if (opcaoDesejada == 3)
                 {
                     Console.Write("\n" + numero01 + " * " + numero02 + " = " + (numero01 * numero02).ToString("F") + "\n");
-                    opcaoDesejada = 6;
                 }
                 else if (opcaoDesejada == 4)
                 {
                     Console.Write("\n" + numero01 + " / " + numero02 + " = " + (numero01 / numero02).ToString("F") + "\n");
-                    opcaoDesejada = 6;
                 }
                 else if (opcaoDesejada == 5)
                 {
-
-                    opcaoDesejada = 0;
                 }
                 else
                 {
-                    opcaoDesejada = 6;
+                    opcaoDesejada = 0;
                 }
                 
             }
