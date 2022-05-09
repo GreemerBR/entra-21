@@ -8,7 +8,7 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio02
     {
-        //Solicite nomes ao usuário até que o mesmo digite fim para o nome.
+        // Solicite nomes ao usuário até que o mesmo digite fim para o nome.
         public void Executar()
         {
             string nome = "";

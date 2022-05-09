@@ -8,14 +8,15 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio05
     {
-        /*Faça um programa que solicite a quantidade de carros que o usuário deseja
-        cadastrar, após isto solicite para o usuário o modelo, valor e ano do carro até que
-        atinja a quantidade de carros para cadastro.
-        Apresente ao final:
-        ● Média do ano dos carros;
-        ● Média do valor dos carros;
-        ● Quantidade de carros que começam com a letra G;
-        ● Quantidade de carros que começam com a letra A.*/
+        /* Faça um programa que solicite a quantidade de carros que o usuário deseja
+         *  cadastrar, após isto solicite para o usuário o modelo, valor e ano do carro até que
+         *  atinja a quantidade de carros para cadastro.
+         *  Apresente ao final:
+         *  ● Média do ano dos carros;
+         *  ● Média do valor dos carros;
+         *  ● Quantidade de carros que começam com a letra G;
+         *  ● Quantidade de carros que começam com a letra A
+         */
         public void Executar()
         {
             int contadorLoop = 0;

@@ -8,7 +8,7 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio09
     {
-        //Solicite um número e faça o fatorial deste número, utilizando while.
+        // Solicite um número e faça o fatorial deste número, utilizando while.
         public void Executar()
         {
             Console.Write("Informe um número: ");

@@ -8,9 +8,10 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio10
     {
-        /*Solicite um número e apresente:
-        ● Os 50 números antecessores pares;
-        ● Os 50 números sucessores ímpares.*/
+        /* Solicite um número e apresente:
+         * ● Os 50 números antecessores pares;        
+         * ● Os 50 números sucessores ímpares.
+         */
         public void Executar()
         {
             Console.Clear();

@@ -8,9 +8,9 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio01
     {
+        // Solicite o preço e nome da peça de 13 peças.
         public void Executar()
-        {
-            //Solicite o preço e nome da peça de 13 peças.
+        {            
             int indice = 0;
             string nomeProduto = "";
             double precoProduto = 0.00;

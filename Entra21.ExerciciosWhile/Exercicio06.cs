@@ -8,8 +8,9 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio06
     {
-        /*Solicite o nome, valor e a quantidade de produtos, enquanto o nome for diferente de
-        sair, ao final deve-se aplicar ao valor total da compra um desconto de 5%.*/
+        /* Solicite o nome, valor e a quantidade de produtos, enquanto o nome for diferente de
+         * sair, ao final deve-se aplicar ao valor total da compra um desconto de 5%.
+         */
         public void Executar()
         {
             string nomeProduto = "";

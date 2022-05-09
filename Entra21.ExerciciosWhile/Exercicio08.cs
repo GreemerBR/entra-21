@@ -8,7 +8,7 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio08
     {
-        //Solicite um número e apresentar a tabuada do mesmo até 1000.
+        // Solicite um número e apresentar a tabuada do mesmo até 1000.
         public void Executar()
         {
             Console.Write("Informe o número desejado: ");

@@ -8,7 +8,7 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio12
     {
-        /*A padaria do joão necessita armazenar os pedidos dos seus clientes, cada cliente
+        /* A padaria do joão necessita armazenar os pedidos dos seus clientes, cada cliente
          * poderá realizar quantos pedidos desejar, porém para que o cliente possa solicitar
          * estes produtos o cardápio deve ser apresentado para ele.
          * Ao final de o cliente solicitar os produtos, deve-se apresentar o total dos pedidos e a
@@ -20,8 +20,8 @@ namespace Entra21.ExerciciosWhile
          * ● A quantidade de doces escolhidos;
          * ● A quantidade de Sanduíches escolhidos;
          * ● A quantidade de pizzas escolhidas;
-         * ● A média dos produtos;
-        */
+         * ● A média dos produtos.
+         */
         public void Executar()
         {
             Console.WriteLine("Bem vindo(a) a padaria do João");

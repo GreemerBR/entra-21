@@ -8,9 +8,10 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio11
     {
-        /*Solicite para o usuário dois números. Apresente o seguinte menu e de acordo com a
-            escolha deve ser apresentado a operação aritmética, isto deve ocorrer até que o
-            mesmo escolha a opção de sair*/
+        /* Solicite para o usuário dois números. Apresente o seguinte menu e de acordo com a
+         * escolha deve ser apresentado a operação aritmética, isto deve ocorrer até que o
+         * mesmo escolha a opção de sair
+         */            
         public void Executar()
         {
             Console.Write("Informe o primeiro número: ");

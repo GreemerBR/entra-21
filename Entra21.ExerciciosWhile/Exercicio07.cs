@@ -8,8 +8,9 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio07
     {
-        /*Solicite o nome, valor, quantidade enquanto a quantidade de produtos for menor que
-        5. Ao final deve-se aplicar um desconto de R$ 150,00.*/
+        /* Solicite o nome, valor, quantidade enquanto a quantidade de produtos for menor que
+         * 5. Ao final deve-se aplicar um desconto de R$ 150,00.
+         */
         public void Executar()
         {
             int indice = 0;

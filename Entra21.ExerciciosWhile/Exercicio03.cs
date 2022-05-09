@@ -8,7 +8,7 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio03
     {
-        //Solicite a idade para o usuário até que ele digite uma idade maior que 128.
+        // Solicite a idade para o usuário até que ele digite uma idade maior que 128.
         public void Executar()
         {
             int idade = 0;

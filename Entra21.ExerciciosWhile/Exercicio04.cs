@@ -8,9 +8,9 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio04
     {
-        /*Solicite o peso para o usuário até que o peso seja menor que 0 ou maior que
-        300,00. Apresentar ao final a quantidade de pessoas que informaram o peso.*/
-
+        /* Solicite o peso para o usuário até que o peso seja menor que 0 ou maior que
+         * 300,00. Apresentar ao final a quantidade de pessoas que informaram o peso
+         */
         public void Executar()
         {
             double peso = 0;
