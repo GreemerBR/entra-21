@@ -34,15 +34,14 @@ namespace Entra21.ExerciciosWhile
             {
                 Console.Clear();
                 Console.Write("Informe o modelo do carro: ");
-                string modelo = Console.ReadLine().ToLower().Trim();
-                string primeiraLetra = modelo.Substring(0, 1);
+                string modelo = Console.ReadLine().ToLower().Trim();                
 
-                if (primeiraLetra == "g")
+                if (modelo.StartsWith("g") == true)
                 {
                     contadorCarroG = contadorCarroG + 1;
                 }
 
-                if (primeiraLetra == "a")
+                if (modelo.StartsWith("a") == true)
                 {
                     contadorCarroA = contadorCarroA + 1;
                 }
