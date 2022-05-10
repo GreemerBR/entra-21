@@ -103,9 +103,9 @@ else if (opcaoDeseja == 16)
 {
     Exercicio16 Exercicio16 = new Exercicio16();
     Exercicio16.Executar();
-}
+}*/
 else if (opcaoDeseja == 17)
 {
     Exercicio17 Exercicio17 = new Exercicio17();
     Exercicio17.Executar();
-}*/
+}
