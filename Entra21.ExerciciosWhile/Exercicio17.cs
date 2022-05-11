@@ -27,29 +27,14 @@ namespace Entra21.ExerciciosWhile
          */
         public void Executar()
         {
-            int horas = 23;
-            int minutos = 59;
-            int segundos = 59;            
+            int contador = 0;
+            DateTime temporizador = new DateTime(2022, 5, 17, 0, 0, 0);
 
-            while (horas >= 0)
+            while (contador < 86400)
             {
-                while (minutos >= 0)
-                {
-                    while (segundos >= 0)
-                    {
-                        if (segundos < 10)
-                        {
-                            
-                        }
-                        Console.WriteLine(horas + ":" + minutos + ":" + segundos);
-                        segundos = segundos - 1;
-                    }
-                    minutos = minutos - 1;
-                    segundos = 59;
-                }
-                horas = horas - 1;
-                minutos = 59;
-                segundos = 59;
+                temporizador = temporizador.AddSeconds(-1);
+                Console.WriteLine(temporizador.ToString("HH:mm:ss"));
+                contador = contador + 1;
             }
         }
     }
