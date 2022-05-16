@@ -2,35 +2,41 @@
 
 var opcaoDesejada = 0;
 
-Console.Clear();    
-
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine(@"-------------MENU-------------
-  1 - Exercício 01
-  5 - Exercício 05
-  8 - Exercício 08
- 10 - Exercício 10
- 12 - Exercício 12
- 13 - Exercício 13");
-
-while (opcaoDesejada <= 0)
+while (opcaoDesejada != 20)
 {
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine(@"
+-------------MENU-------------
+ 1 - Exercício 01
+ 5 - Exercício 05
+ 8 - Exercício 08
+10 - Exercício 10
+12 - Exercício 12
+13 - Exercício 13
+20 - SAIR
+");
+
     try
     {
         Console.Write("Digite a opção desejada: ");
         opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 
-        if (opcaoDesejada < 0)
+        if (opcaoDesejada < 0 || (opcaoDesejada != 1 && opcaoDesejada != 5 && opcaoDesejada != 8 && opcaoDesejada != 10
+    && opcaoDesejada != 12 && opcaoDesejada != 13 && opcaoDesejada != 20))
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("A opção informada não é válida, por favor tente novamente!");
+            Console.WriteLine("A opção informada não é válida. Por favor informe um número presente no MENU.");
             Console.ForegroundColor = ConsoleColor.Green;
+        }
+        else
+        {
+            Console.Clear();
         }
     }
     catch (Exception ex)
     {
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("A opção informada não é válida, por favor tente novamente!");
+        Console.WriteLine("A opção informada não é válida. Por favor informe um número presente no MENU.");
         Console.ForegroundColor = ConsoleColor.Green;
     }
 
@@ -58,4 +64,9 @@ while (opcaoDesejada <= 0)
         exercicio10.Executar();
     }
 
+    if (opcaoDesejada == 12)
+    {
+        var exercicio12 = new Exercicio12();
+        exercicio12.Executar();
+    }
 }

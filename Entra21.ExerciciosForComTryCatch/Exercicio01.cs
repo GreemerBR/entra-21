@@ -64,6 +64,8 @@ namespace Entra21.ExerciciosForComTryCatch
                 nomeTeste = false;
                 precoTeste = false;
             }
+
+            Console.WriteLine();
         }
     }
 }

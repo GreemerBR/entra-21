@@ -20,10 +20,8 @@ namespace Entra21.ExerciciosForComTryCatch
         public void Executar()
         {
             var quantidadeCarros = 0;
-            var somaAno = 0;
-            var mediaAno = 0;
+            var somaAno = 0;            
             var somaValor = 0.0;
-            var mediaValor = 0.0;
             var quantidadeCarrosComecamComA = 0;
             var quantidadeCarrosComecamComG = 0;
 
@@ -143,14 +141,16 @@ namespace Entra21.ExerciciosForComTryCatch
                 }
             }
 
-            mediaAno = somaAno / quantidadeCarros;
-            mediaValor = somaValor / quantidadeCarros;
+            var mediaAno = somaAno / quantidadeCarros;
+            var mediaValor = somaValor / quantidadeCarros;
 
             Console.Clear();
             Console.WriteLine("A ano médio dos carros é de " + mediaAno);
             Console.WriteLine("O valor médio dos carros é de R$ " + mediaValor);
             Console.WriteLine("Existem um total de " + quantidadeCarrosComecamComG + " carro(s) que começa(m) com a letra 'G'.");
             Console.WriteLine("Existem um total de " + quantidadeCarrosComecamComA + " carro(s) que começa(m) com a letra 'A'.");
+
+            Console.WriteLine();
         }
     }
 }

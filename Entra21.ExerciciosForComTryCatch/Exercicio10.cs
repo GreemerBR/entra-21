@@ -78,6 +78,8 @@ namespace Entra21.ExerciciosForComTryCatch
                     Console.Write(numero + " ");
                 }
             }
+
+            Console.WriteLine();
         }
     }
 }

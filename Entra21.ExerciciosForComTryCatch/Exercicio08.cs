@@ -39,6 +39,8 @@ namespace Entra21.ExerciciosForComTryCatch
             {
                 Console.WriteLine(i + " x " + numero + " = " + (i * numero));
             }
+
+            Console.WriteLine();
         }
     }
 }
