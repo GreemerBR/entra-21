@@ -46,4 +46,10 @@ while (opcaoDesejada <= 0)
         exercicio05.Executar();
     }
 
+    if (opcaoDesejada == 8)
+    {
+        var exercicio08 = new Exercicio08();
+        exercicio08.Executar();
+    }
+
 }
