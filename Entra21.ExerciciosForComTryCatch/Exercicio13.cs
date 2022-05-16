@@ -35,9 +35,19 @@ namespace Entra21.ExerciciosForComTryCatch
          * ➔ O jogador com a maior quantidade de cartões amarelos recebidos;
          * ➔ O jogador com a menor quantidade de cartões vermelhos recebidos.
          */
-
         public void Executar()
         {
+            var jogadorMenorPeso = "";
+            var jogadorMaiorPeso = "";
+            var jogadorMaiorAltura = "";
+            var jogadorMenorNome = "";
+            var jogadorMaiorNome = "";
+            var jogadorMenosCartoesAmarelos = "";
+            var jogadorMaisCartoesAmarelos = "";
+            var jogadorMenosCartoesVermelhos = "";
+            var jogadorMaisCartoesVermelhos = "";
+            var jogadoresSexoM = 0;
+            var jogadoresSexoF = 0;
         }
     }
 }

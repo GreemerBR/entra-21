@@ -77,10 +77,11 @@ ITEM        TIPO                          PRODUTO                              V
                     Console.ForegroundColor = ConsoleColor.Green;
                 }
 
-                if (i == 1)
+                var quantidadeProdutos = 0;
+                var teste = false;
+
+                if (i != 16)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
                     while (teste == false)
                     {
                         try
@@ -106,6 +107,10 @@ ITEM        TIPO                          PRODUTO                              V
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
                     }
+                }
+
+                if (i == 1)
+                {
                     produtos = produtos + "Bolo Brigadeiro R$ 29,50 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 29.50 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -114,33 +119,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 2)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Bolo Floresta Negra R$ 2,00 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 2.00 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -149,33 +127,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 3)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Bolo Leite com Nutella R$ 29,23 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 29.23 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -184,33 +135,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 4)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Bolo Mousse de Chocolate R$ 7,10 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 7.10 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -219,33 +143,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 5)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Bolo Nega Maluca R$ 19,33 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 19.33 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -254,33 +151,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 6)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Bomba de Creme R$ 17,71 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 17.71 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -289,33 +159,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 7)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Bomba de Morango R$ 4,82 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 4.82 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -324,33 +167,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 8)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Sanduíche de Filé-Mignon com fritas e cheddar R$ 21,16 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 21.16 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -359,33 +175,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 9)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Sanduíche de Hambúrguer com queijos, champignon e rúcula R$ 12,70 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 12.70 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -394,33 +183,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 10)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Sanduíche de Provolone com salame R$ 19,70 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 19.70 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -429,33 +191,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 11)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Sanduíche Vegetariano de berinjela R$ 28,22 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 28.22 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -464,33 +199,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 12)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Pizza de Calabrea R$ 8,98 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 8.98 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -499,33 +207,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 13)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Pizza Napolitana R$ 0,42 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 0.42 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -534,33 +215,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 14)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Pizza Peruana R$ 18,36 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 18.36 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
@@ -569,33 +223,6 @@ ITEM        TIPO                          PRODUTO                              V
 
                 if (i == 15)
                 {
-                    var quantidadeProdutos = 0;
-                    var teste = false;
-                    while (teste == false)
-                    {
-                        try
-                        {
-                            Console.Write("Informe a quantidade de unidades: ");
-                            quantidadeProdutos = Convert.ToInt32(Console.ReadLine());
-
-                            if (quantidadeProdutos < 0)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else
-                            {
-                                teste = true;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro positivo.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                        }
-                    }
                     produtos = produtos + "Pizza Portuguesa R$ 27,50 " + quantidadeProdutos + " unidade(s) \n";
                     total = total + 27.50 * quantidadeProdutos;
                     quantidadeTotalProdutos = quantidadeTotalProdutos + quantidadeProdutos;
