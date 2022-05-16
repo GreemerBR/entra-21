@@ -36,8 +36,14 @@ while (opcaoDesejada <= 0)
 
     if (opcaoDesejada == 1)
     {
-        Exercicio01 exemplo01 = new Exercicio01();
-        exemplo01.Executar();
+        var exercicio01 = new Exercicio01();
+        exercicio01.Executar();
+    }
+
+    if (opcaoDesejada == 5)
+    {
+        var exercicio05 = new Exercicio05();
+        exercicio05.Executar();
     }
 
 }
