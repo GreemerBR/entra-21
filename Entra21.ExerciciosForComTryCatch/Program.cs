@@ -70,7 +70,7 @@ while (opcaoDesejada != 20)
         exercicio12.Executar();
     }
 
-    if (opcaoDesejada == 20)
+    if (opcaoDesejada == 13)
     {
         var exercicio13 = new Exercicio13();
         exercicio13.Executar();

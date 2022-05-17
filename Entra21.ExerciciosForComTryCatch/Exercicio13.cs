@@ -38,16 +38,280 @@ namespace Entra21.ExerciciosForComTryCatch
         public void Executar()
         {
             var jogadorMenorPeso = "";
+            var menorPeso = double.MaxValue;
             var jogadorMaiorPeso = "";
+            var maiorPeso = double.MinValue;
             var jogadorMaiorAltura = "";
+            var maiorAltura = double.MinValue;
             var jogadorMenorNome = "";
+            var menorNome = int.MaxValue;
             var jogadorMaiorNome = "";
+            var maiorNome = int.MaxValue;
             var jogadorMenosCartoesAmarelos = "";
+            var menosCartoesAmarelos = int.MaxValue;
             var jogadorMaisCartoesAmarelos = "";
+            var maisCartoesAmarelos = int.MinValue;
             var jogadorMenosCartoesVermelhos = "";
+            var menosCartoesVermelhos = int.MaxValue;
             var jogadorMaisCartoesVermelhos = "";
+            var maisCartoesVermelhos = int.MinValue;
             var jogadoresSexoM = 0;
             var jogadoresSexoF = 0;
+
+            for (var i = 0; i < 22; i++)
+            {
+                var testeNome = false;
+                var nome = "";
+
+                while (testeNome == false)
+                {
+                    Console.Write("Informe o nome do(a) jogador(a): ");
+                    nome = Console.ReadLine().Trim();
+
+                    if (nome.Length >= 3)
+                    {
+                        testeNome = true;
+                    }
+                }
+
+                var idade = 0;
+
+                while (idade <= 0)
+                {
+                    try
+                    {
+                        Console.Write("Informe a idade do(a) jogador(a): ");
+                        idade = Convert.ToInt32(Console.ReadLine());
+
+                        if (idade < 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O valor informado é invalido. Por favor informe uma idade maior do que zero.");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe um número maior do que zero.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+
+                var peso = 0.0;
+
+                while (peso <= 0)
+                {
+                    try
+                    {
+                        Console.Write("Informe o peso do(a) jogador(a): ");
+                        peso = Convert.ToDouble(Console.ReadLine());
+
+                        if (peso < 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O valor informado é invalido. Por favor informe um peso maior do que zero.");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe um número maior do que zero.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+
+                var altura = 0.0;
+
+                try
+                {
+                    Console.Write("Informe a altura do(a) jogador(a): ");
+                    altura = Convert.ToDouble(Console.ReadLine());
+
+                    if (idade < 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe uma altura maior do que zero.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("O valor informado é invalido. Por favor informe um número maior do que zero.");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+
+                var sexo = "";
+                var testeSexo = false;
+
+                while (testeSexo == false)
+                {
+                    Console.Write("Informe o sexo do(a) jogador(a). Utilize 'M' para masculino ou 'F' para feminino: ");
+                    sexo = Console.ReadLine().ToLower().Trim();
+
+                    if (sexo != "m" && sexo != "f")
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe 'M' para masculino ou 'F' para feminino.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                    else
+                    {
+                        testeSexo = true;
+                    }
+                }
+
+                var golsMarcados = -1;
+
+                while (golsMarcados < 0)
+                {
+                    try
+                    {
+                        Console.Write("Informe a quantidade de gols marcados pelo(a) jogador(a): ");
+                        golsMarcados = Convert.ToInt32(Console.Read());
+
+                        if (golsMarcados < 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+
+                var cartoesAmarelos = -1;
+
+                while (cartoesAmarelos < 0)
+                {
+                    try
+                    {
+                        Console.Write("Informe a quantidade de cartões amarelos recebidos pelo(a) jogador(a): ");
+                        cartoesAmarelos = Convert.ToInt32(Console.Read());
+
+                        if (cartoesAmarelos < 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+
+                var cartoesVermelhos = -1;
+
+                while (cartoesVermelhos < 0)
+                {
+                    try
+                    {
+                        Console.Write("Informe a quantidade de cartões amarelos recebidos pelo(a) jogador(a): ");
+                        cartoesVermelhos = Convert.ToInt32(Console.Read());
+
+                        if (cartoesVermelhos < 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+                
+                if (peso < menorPeso)
+                {
+                    menorPeso = peso;
+                    jogadorMenorPeso = nome;
+                }
+
+                if (peso > maiorPeso)
+                {
+                    maiorPeso = peso;
+                    jogadorMaiorPeso = nome;
+                }
+
+                if (altura > maiorAltura)
+                {
+                    maiorAltura = altura;
+                    jogadorMaiorAltura = nome;
+                }
+
+                if (nome.Length < menorNome)
+                {
+                    menorNome = nome.Length;
+                    jogadorMenorNome = nome;
+                }
+
+                if(nome.Length > maiorNome)
+                {
+                    maiorNome = nome.Length;
+                    jogadorMaiorNome = nome;
+                }
+
+                if (cartoesAmarelos < menosCartoesAmarelos)
+                {
+                    menosCartoesAmarelos = cartoesAmarelos;
+                    jogadorMenosCartoesAmarelos = nome;
+                }
+
+                if (cartoesAmarelos > maisCartoesAmarelos)
+                {
+                    maisCartoesAmarelos = cartoesAmarelos;
+                    jogadorMaisCartoesAmarelos = nome;
+                }
+
+                if (cartoesVermelhos < menosCartoesVermelhos)
+                {
+                    menosCartoesVermelhos = cartoesVermelhos;
+                    jogadorMenosCartoesVermelhos = nome;
+                }
+
+                if (cartoesVermelhos > maisCartoesVermelhos)
+                {
+                    maisCartoesVermelhos = cartoesVermelhos;
+                    jogadorMaisCartoesVermelhos = nome;
+                }
+
+                if (sexo == "m")
+                {
+                    jogadoresSexoM++;
+                }
+
+                if (sexo == "f")
+                {
+                    jogadoresSexoF++;
+                }
+            }
+
+            Console.Clear();
+            Console.WriteLine("O(a) jogador(a) com o menor peso é: " + jogadorMenorPeso);
+            Console.WriteLine("O(a) jogador(a) com o maior peso é: " + jogadorMaiorPeso);
+            Console.WriteLine("O(a) jogador(a) com a maior altura é: " + jogadorMaiorAltura);
+            Console.WriteLine("O(a) jogador(a) com o menor nome é: " + jogadorMenorNome);
+            Console.WriteLine("O(a) jogador(a) com o maior nome é: " + jogadorMaiorNome);
+            Console.WriteLine("A um total de " + " jogadores do sexo F." + jogadoresSexoF);
+            Console.WriteLine("A um total de " + " jogadores do sexo M." + jogadoresSexoM);
+            Console.WriteLine("O(a) jogador(a) com a menor quantidade de cartões amarelos é: " + jogadorMenosCartoesAmarelos);
+            Console.WriteLine("O(a) jogador(a) com a maior quantidade de cartões amarelos é: " + jogadorMaisCartoesAmarelos);
+            Console.WriteLine("O(a) jogador(a) com a menor quantidade de cartões vermelhor é: " + jogadorMenosCartoesVermelhos);
+            Console.WriteLine("O(a) jogador(a) com a maior quantidade de cartões vermelhor é: " + jogadorMaisCartoesVermelhos);
         }
     }
 }
