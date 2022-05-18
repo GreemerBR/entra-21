@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWhile", "En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{35750D2F-6253-4781-AAC0-16A14B767E29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosFor", "Entra21-ExemplosFor\Entra21.ExemplosFor.csproj", "{F503E1E2-6532-4C2E-9310-A2DBF97F4BA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosFor", "Entra21-ExemplosFor\Entra21.ExemplosFor.csproj", "{F503E1E2-6532-4C2E-9310-A2DBF97F4BA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosForComTryCatch", "Entra21.ExerciciosForComTryCatch\Entra21.ExerciciosForComTryCatch.csproj", "{75758826-F0E3-457F-BC50-DC7E5EA3C0D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosForComTryCatch", "Entra21.ExerciciosForComTryCatch\Entra21.ExerciciosForComTryCatch.csproj", "{75758826-F0E3-457F-BC50-DC7E5EA3C0D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosTryCatch", "ExemplosTryCatch\Entra21.ExemplosTryCatch.csproj", "{1BE1A420-1131-4998-BDF6-B465A29B39CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{75758826-F0E3-457F-BC50-DC7E5EA3C0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75758826-F0E3-457F-BC50-DC7E5EA3C0D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75758826-F0E3-457F-BC50-DC7E5EA3C0D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE1A420-1131-4998-BDF6-B465A29B39CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE1A420-1131-4998-BDF6-B465A29B39CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE1A420-1131-4998-BDF6-B465A29B39CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE1A420-1131-4998-BDF6-B465A29B39CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
