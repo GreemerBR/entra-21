@@ -46,7 +46,7 @@ namespace Entra21.ExerciciosForComTryCatch
             var jogadorMenorNome = "";
             var menorNome = int.MaxValue;
             var jogadorMaiorNome = "";
-            var maiorNome = int.MaxValue;
+            var maiorNome = int.MinValue;
             var jogadorMenosCartoesAmarelos = "";
             var menosCartoesAmarelos = int.MaxValue;
             var jogadorMaisCartoesAmarelos = "";
@@ -60,6 +60,7 @@ namespace Entra21.ExerciciosForComTryCatch
 
             for (var i = 0; i < 22; i++)
             {
+                Console.Clear();
                 var testeNome = false;
                 var nome = "";
 
@@ -163,14 +164,14 @@ namespace Entra21.ExerciciosForComTryCatch
                     }
                 }
 
-                var golsMarcados = -1;
+                var testeGols = false;                
 
-                while (golsMarcados < 0)
+                while (testeGols == false)
                 {
                     try
                     {
                         Console.Write("Informe a quantidade de gols marcados pelo(a) jogador(a): ");
-                        golsMarcados = Convert.ToInt32(Console.Read());
+                        var golsMarcados = Convert.ToInt32(Console.Read());
 
                         if (golsMarcados < 0)
                         {
@@ -178,29 +179,9 @@ namespace Entra21.ExerciciosForComTryCatch
                             Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
-                        Console.ForegroundColor = ConsoleColor.Green;
-                    }
-                }
-
-                var cartoesAmarelos = -1;
-
-                while (cartoesAmarelos < 0)
-                {
-                    try
-                    {
-                        Console.Write("Informe a quantidade de cartões amarelos recebidos pelo(a) jogador(a): ");
-                        cartoesAmarelos = Convert.ToInt32(Console.Read());
-
-                        if (cartoesAmarelos < 0)
+                        else
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
-                            Console.ForegroundColor = ConsoleColor.Green;
+                            testeGols = true;
                         }
                     }
                     catch (Exception ex)
@@ -211,20 +192,54 @@ namespace Entra21.ExerciciosForComTryCatch
                     }
                 }
 
-                var cartoesVermelhos = -1;
+                var testeCartoesAmarelos = false;
+                var cartoesAmarelos = 0;
 
-                while (cartoesVermelhos < 0)
+                while (testeCartoesAmarelos == false)
                 {
                     try
                     {
                         Console.Write("Informe a quantidade de cartões amarelos recebidos pelo(a) jogador(a): ");
-                        cartoesVermelhos = Convert.ToInt32(Console.Read());
+                        cartoesAmarelos = Convert.ToInt32(Console.ReadLine());
+
+                        if (cartoesAmarelos < 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                        else
+                        {
+                            testeCartoesAmarelos = true;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+
+                var testeCartoesVermelhos = false;
+                var cartoesVermelhos = 0;
+
+                while (testeCartoesVermelhos == false)
+                {
+                    try
+                    {
+                        Console.Write("Informe a quantidade de cartões vermelhos recebidos pelo(a) jogador(a): ");
+                        cartoesVermelhos = Convert.ToInt32(Console.ReadLine());
 
                         if (cartoesVermelhos < 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("O valor informado é invalido. Por favor informe um número inteiro igual ou maior que zero.");
                             Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                        else
+                        {
+                            testeCartoesVermelhos = true;
                         }
                     }
                     catch (Exception ex)
@@ -306,8 +321,8 @@ namespace Entra21.ExerciciosForComTryCatch
             Console.WriteLine("O(a) jogador(a) com a maior altura é: " + jogadorMaiorAltura);
             Console.WriteLine("O(a) jogador(a) com o menor nome é: " + jogadorMenorNome);
             Console.WriteLine("O(a) jogador(a) com o maior nome é: " + jogadorMaiorNome);
-            Console.WriteLine("A um total de " + " jogadores do sexo F." + jogadoresSexoF);
-            Console.WriteLine("A um total de " + " jogadores do sexo M." + jogadoresSexoM);
+            Console.WriteLine("A um total de " + jogadoresSexoF + " jogador(es) do sexo F.");
+            Console.WriteLine("A um total de " + jogadoresSexoM + " jogador(es) do sexo M.");
             Console.WriteLine("O(a) jogador(a) com a menor quantidade de cartões amarelos é: " + jogadorMenosCartoesAmarelos);
             Console.WriteLine("O(a) jogador(a) com a maior quantidade de cartões amarelos é: " + jogadorMaisCartoesAmarelos);
             Console.WriteLine("O(a) jogador(a) com a menor quantidade de cartões vermelhor é: " + jogadorMenosCartoesVermelhos);
