@@ -7,7 +7,7 @@ while (opcaoDesejada != 3)
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine(@"
 -------------MENU-------------
- 1 - Exemplo Replace
+ 1 - Exemplo Replace e Length
  2 - Exemplo Substring e DateTime
  3 - Exemplo StartsWith
  4 - Exemplo EndsWith
@@ -22,7 +22,7 @@ while (opcaoDesejada != 3)
         opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 
         if (opcaoDesejada < 0 || (opcaoDesejada != 1 && opcaoDesejada != 2 && opcaoDesejada != 3 && opcaoDesejada != 4
-            && opcaoDesejada != 5 && opcaoDesejada != 6 && opcaoDesejada != 7)
+            && opcaoDesejada != 5 && opcaoDesejada != 6 && opcaoDesejada != 7)) 
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("A opção informada não é válida. Por favor informe um número presente no MENU.");
