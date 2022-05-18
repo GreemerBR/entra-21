@@ -8,15 +8,14 @@ namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio14
     {
+        /* Solicitar a quantidade de caracteres que serão digitados. Após isto solicitando um
+         * caracter por vez e armazenar o texto, no final deve-se apresentar o texto.
+         * Para solicitar o caracter ao usuário deve-se utilizar char.
+         * Ao final apresente o texto contendo os caracteres que o usuário digitou.
+         * Exemplo: “A camisa é amarela”
+         */
         public void Executar()
         {
-            /* Solicitar a quantidade de caracteres que serão digitados. Após isto solicitando um
-             * caracter por vez e armazenar o texto, no final deve-se apresentar o texto.
-             * Para solicitar o caracter ao usuário deve-se utilizar char.
-             * Ao final apresente o texto contendo os caracteres que o usuário digitou.
-             * Exemplo: “A camisa é amarela”
-             */
-
             Console.Write("Informe quantos caracteres serão digitiados: ");
             int quantidadeCaracteres = Convert.ToInt32(Console.ReadLine());
             string texto = "";

@@ -94,7 +94,7 @@ else if (opcaoDeseja == 14)
     Exercicio14 Exercicio14 = new Exercicio14();
     Exercicio14.Executar();
 }
-/*else if (opcaoDeseja == 15)
+else if (opcaoDeseja == 15)
 {
     Exercicio15 Exercicio15 = new Exercicio15();
     Exercicio15.Executar();
@@ -103,7 +103,7 @@ else if (opcaoDeseja == 16)
 {
     Exercicio16 Exercicio16 = new Exercicio16();
     Exercicio16.Executar();
-}*/
+}
 else if (opcaoDeseja == 17)
 {
     Exercicio17 Exercicio17 = new Exercicio17();
