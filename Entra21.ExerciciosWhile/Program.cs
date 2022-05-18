@@ -89,12 +89,12 @@ else if (opcaoDeseja == 13)
     Exercicio13 Exercicio13 = new Exercicio13();
     Exercicio13.Executar();
 }
-/*else if (opcaoDeseja == 14)
+else if (opcaoDeseja == 14)
 {
     Exercicio14 Exercicio14 = new Exercicio14();
     Exercicio14.Executar();
 }
-else if (opcaoDeseja == 15)
+/*else if (opcaoDeseja == 15)
 {
     Exercicio15 Exercicio15 = new Exercicio15();
     Exercicio15.Executar();

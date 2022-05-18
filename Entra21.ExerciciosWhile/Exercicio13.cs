@@ -35,7 +35,6 @@ namespace Entra21.ExerciciosWhile
          * ➔ O jogador com a maior quantidade de cartões amarelos recebidos;
          * ➔ O jogador com a menor quantidade de cartões vermelhos recebidos.
          */
-
         public void Executar()
         {
             string nome = "";
