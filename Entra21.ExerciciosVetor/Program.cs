@@ -58,4 +58,16 @@ Informe a opção desejada: ");
         var exercicio03 = new Exercicio03();
         exercicio03.Executar();
     }
+
+    if (opcaoDesejada == 4)
+    {
+        var exercicio04 = new Exercicio04();
+        exercicio04.Executar();
+    }
+
+    if (opcaoDesejada == 5)
+    {
+        var exercicio05 = new Exercicio05();
+        exercicio05.Executar();
+    }
 }
