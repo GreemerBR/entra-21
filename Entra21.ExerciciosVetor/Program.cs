@@ -2,9 +2,8 @@
 
 Console.ForegroundColor = ConsoleColor.Green;
 var opcaoDesejada = 0;
-var teste = false;
 
-while (teste == false)
+while (opcaoDesejada != 8)
 {
     Console.Write(@"
 ------ MENU ------
@@ -16,7 +15,6 @@ while (teste == false)
 6 - Exercício 06
 7 - Exercício 07
 8 - SAIR
-
 
 Informe a opção desejada: ");
 
@@ -33,7 +31,7 @@ Informe a opção desejada: ");
         }
         else
         {
-            teste = true;
+            Console.Clear();
         }
     }
     catch (Exception ex)
@@ -42,16 +40,22 @@ Informe a opção desejada: ");
         Console.WriteLine("A opção informada não é valida. Por favor informe um número presente no MENU.");
         Console.ForegroundColor = ConsoleColor.Green;
     }
-}
 
-if (opcaoDesejada == 1)
-{
-    var exercicio01 = new Exercicio01();
-    exercicio01.Executar();
-}
+    if (opcaoDesejada == 1)
+    {
+        var exercicio01 = new Exercicio01();
+        exercicio01.Executar();
+    }
 
-if (opcaoDesejada == 2)
-{
-    var exercicio02 = new Exercicio02();
-    exercicio02.Executar();
+    if (opcaoDesejada == 2)
+    {
+        var exercicio02 = new Exercicio02();
+        exercicio02.Executar();
+    }
+
+    if (opcaoDesejada == 3)
+    {
+        var exercicio03 = new Exercicio03();
+        exercicio03.Executar();
+    }
 }
