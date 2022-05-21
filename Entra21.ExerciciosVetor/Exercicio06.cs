@@ -39,14 +39,13 @@ namespace Entra21.ExerciciosVetor
                     }
                 }
 
-
                 var idade = 0;
 
                 while (idade <= 0)
                 {
                     try
                     {
-                        Console.Write("Informe a idade da pessoa: ");
+                        Console.Write($"Informe a idade do(a) {pessoas[i]}: ");
                         idade = Convert.ToInt32(Console.ReadLine());
 
                         if (idade <= 0)
