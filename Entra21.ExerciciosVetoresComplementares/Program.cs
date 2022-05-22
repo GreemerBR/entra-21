@@ -47,13 +47,13 @@ Informe a opção desejada: ");
         exercicio01.Executar();
     }
 
-    /* if (opcaoDesejada == 2)
+    if (opcaoDesejada == 2)
      {
          var exercicio02 = new Exercicio02();
          exercicio02.Executar();
      }
 
-     if (opcaoDesejada == 3)
+     /*if (opcaoDesejada == 3)
      {
          var exercicio03 = new Exercicio03();
          exercicio03.Executar();
