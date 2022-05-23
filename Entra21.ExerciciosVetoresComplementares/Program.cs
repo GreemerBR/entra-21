@@ -59,13 +59,13 @@ Informe a opção desejada: ");
          exercicio03.Executar();
      }
 
-     /*if (opcaoDesejada == 4)
+     if (opcaoDesejada == 4)
      {
          var exercicio04 = new Exercicio04();
          exercicio04.Executar();
      }
 
-     if (opcaoDesejada == 5)
+     /*if (opcaoDesejada == 5)
      {
          var exercicio05 = new Exercicio05();
          exercicio05.Executar();
