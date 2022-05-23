@@ -43,8 +43,7 @@ namespace Entra21.ExerciciosVetoresComplementares
                 }
             }
 
-            var nomesVetor1 = new string[quantidadeNomes];
-            var nomesVetor2 = new string[quantidadeNomes];
+            var nomesVetor1 = new string[quantidadeNomes];           
 
             for (var i = 0; i < quantidadeNomes; i++)
             {
@@ -65,15 +64,20 @@ namespace Entra21.ExerciciosVetoresComplementares
                     }
                     else
                     {
-                        nomesVetor1[i] = nome;
-                        nomesVetor2[(quantidadeNomes - i - 1)] = nome;
+                        nomesVetor1[i] = nome;                        
                         teste = true;
                     }
                 }
             }
 
-            Console.Clear();
-            Console.WriteLine("A tabela abaixo apresenta os nomes informados");
+            var nomesVetor2 = new string[quantidadeNomes];
+
+            for (var i = 0; i < nomesVetor2.Length; i++)
+            {
+                nomesVetor2[i] = nomesVetor1[(quantidadeNomes - i - 1)];
+            }
+
+            Console.Clear();            
             var table = new ConsoleTable("Nomes no vetor 1", "Nomes no vetor 2");
 
             for (var i = 0; i < quantidadeNomes; i++)
