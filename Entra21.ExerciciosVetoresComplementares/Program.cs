@@ -71,13 +71,13 @@ Informe a opção desejada: ");
          exercicio05.Executar();
      }
 
-     /*if (opcaoDesejada == 6)
+     if (opcaoDesejada == 6)
      {
          var exercicio06 = new Exercicio06();
          exercicio06.Executar();
      }
 
-     if (opcaoDesejada == 7)
+     /*if (opcaoDesejada == 7)
      {
          var exercicio07 = new Exercicio07();
          exercicio07.Executar();

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosVetoresComplementares
 {
-    internal class Exercicio05
+    internal class Exercicio06
     {
-        // Crie um vetor de números e solicite. Após isto apresentar os números em ordem crescente
+        // Crie um vetor de números e solicite. Após isto apresentar os números em ordem decrescente
         public void Executar()
         {
             Console.Clear();
@@ -62,27 +62,27 @@ namespace Entra21.ExerciciosVetoresComplementares
                 }
             }
 
-            var numerosOrdemCrescente = new double[quantidadeNumeros];
+            var numerosOrdemDecrescente = new double[quantidadeNumeros];
 
             for (var i = 0; i < quantidadeNumeros; i++)
             {
                 var contador = 0;
                 for (var j = 0; j < quantidadeNumeros; j++)
                 {
-                    if (numeros[i] > numeros[j])
+                    if (numeros[i] < numeros[j])
                     {
                         contador++;
                     }
                 }
 
-                numerosOrdemCrescente[contador] = numeros[i];
+                numerosOrdemDecrescente[contador] = numeros[i];
             }
 
-            var table = new ConsoleTable("Números em ordem crescente");
+            var table = new ConsoleTable("Números em ordem decrescente");
 
             for (var i = 0; i < quantidadeNumeros; i++)
             {
-                table.AddRow(numerosOrdemCrescente[i]);
+                table.AddRow(numerosOrdemDecrescente[i]);
             }
 
             table.Write(Format.Alternative);
