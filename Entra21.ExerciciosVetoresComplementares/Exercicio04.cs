@@ -51,7 +51,7 @@ namespace Entra21.ExerciciosVetoresComplementares
                 {
                     try
                     {
-                        Console.Write("Informe o números: ");
+                        Console.Write("Informe o número: ");
                         numero = Convert.ToInt32(Console.ReadLine());
 
                         if (numero <= 0)
