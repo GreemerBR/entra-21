@@ -19,20 +19,20 @@ namespace Entra21.ExerciciosVetoresComplementares
         public void Executar()
         {
             Console.Clear();
-            var numerosVetor1 = new double[8];            
+            var numerosDesordenados = new double[8];            
 
-            for (var i = 0; i < numerosVetor1.Length; i++)
+            for (var i = 0; i < numerosDesordenados.Length; i++)
             {
-                var teste = false;
-                while (teste == false)
+                var numeroValido = false;
+                while (numeroValido == false)
                 {
                     try
                     {
                         Console.Write("Informe um número: ");
                         var numero = Convert.ToDouble(Console.ReadLine());
 
-                        numerosVetor1[i] = numero;
-                        teste = true;
+                        numerosDesordenados[i] = numero;
+                        numeroValido = true;
                     }
                     catch (Exception ex)
                     {
@@ -43,26 +43,26 @@ namespace Entra21.ExerciciosVetoresComplementares
                 }
             }
 
-            var numerosVetor2 = new double[8];
+            var numerosOrdenados = new double[8];
 
-            for (var i = 0; i < numerosVetor2.Length; i++)
+            for (var i = 0; i < numerosOrdenados.Length; i++)
             {
                 if (i == 0)
                 {
-                    numerosVetor2[i] = numerosVetor1[numerosVetor2.Length - 1] + numerosVetor1[i];
+                    numerosOrdenados[i] = numerosDesordenados[numerosOrdenados.Length - 1] + numerosDesordenados[i];
                 }
                 else
                 {
-                    numerosVetor2[i] = numerosVetor1[i - 1] + numerosVetor1[i];
+                    numerosOrdenados[i] = numerosDesordenados[i - 1] + numerosDesordenados[i];
                 }
             }
 
             Console.Clear();            
             var table = new ConsoleTable("Números no vetor 1", "Números no vetor 2");
 
-            for (var i = 0; i < numerosVetor1.Length; i++)
+            for (var i = 0; i < numerosDesordenados.Length; i++)
             {
-                table.AddRow(numerosVetor1[i], numerosVetor2[i]);
+                table.AddRow(numerosDesordenados[i], numerosOrdenados[i]);
             }
 
             table.Write(Format.Alternative);

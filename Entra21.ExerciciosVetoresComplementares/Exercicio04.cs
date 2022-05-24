@@ -17,8 +17,9 @@ namespace Entra21.ExerciciosVetoresComplementares
         {
             Console.Clear();
             var quantidadeNumeros = 0;
+            var quantidadeValida = false;
 
-            while (quantidadeNumeros <= 0)
+            while (quantidadeValida == false)
             {
                 try
                 {
@@ -30,6 +31,10 @@ namespace Entra21.ExerciciosVetoresComplementares
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro maior que zero.");
                         Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                    else
+                    {
+                        quantidadeValida = true;
                     }
                 }
                 catch (Exception ex)
@@ -45,14 +50,14 @@ namespace Entra21.ExerciciosVetoresComplementares
 
             for (var i = 0; i < quantidadeNumeros; i++)
             {
-                var numero = 0;
+                var numeroValido = false;
 
-                while (numero <= 0)
+                while (numeroValido == false)
                 {
                     try
                     {
                         Console.Write("Informe o número: ");
-                        numero = Convert.ToInt32(Console.ReadLine());
+                        var numero = Convert.ToInt32(Console.ReadLine());
 
                         if (numero <= 0)
                         {

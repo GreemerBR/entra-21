@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleTables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,16 +17,16 @@ namespace Entra21.ExerciciosVetoresComplementares
             Console.Clear();
             var numerosPares = new int[10];
             
-            for (var i = 0; i < numerosPares.Length;)
+            for (var i = 0; i < numerosPares.Length;i++)
             {
-                var numero = 0;
+                var numeroValido = false;
 
-                while (numero <= 0)
+                while (numeroValido == false)
                 {
                     try
                     {
                         Console.Write("Informe um número: ");
-                        numero = Convert.ToInt32(Console.ReadLine());
+                        var numero = Convert.ToInt32(Console.ReadLine());
 
                         if (numero <= 0)
                         {
@@ -33,11 +34,19 @@ namespace Entra21.ExerciciosVetoresComplementares
                             Console.WriteLine("O número informado é invalido. Por favor informe um número maior ou igual a zero.");
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
-                        else if (numero % 2 == 0)
+                        else
                         {
-                            numerosPares[i] = numero;                            
-                            i++;
-                        }                       
+                            numeroValido = true;
+                        }
+
+                        if (numero % 2 == 0)
+                        {
+                            numerosPares[i] = numero;
+                        }
+                        else
+                        {
+                            i--;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -49,11 +58,15 @@ namespace Entra21.ExerciciosVetoresComplementares
             }
 
             Console.Clear();
-            Console.WriteLine("Os 10 números pares informados foram: ");
+
+            var table = new ConsoleTable("Este são os 10 números pares informados");
+          
             for (var i = 0; i < numerosPares.Length; i++)
             {
-                Console.WriteLine(numerosPares[i]);
+                table.AddRow(numerosPares[i]);
             }
+
+            table.Write(Format.Alternative);
         }
     }
 }

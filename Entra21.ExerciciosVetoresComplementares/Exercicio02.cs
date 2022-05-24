@@ -43,15 +43,15 @@ namespace Entra21.ExerciciosVetoresComplementares
                 }
             }
 
-            var nomesVetor1 = new string[quantidadeNomes];           
+            var nomesDesordenados = new string[quantidadeNomes];           
 
             for (var i = 0; i < quantidadeNomes; i++)
             {
 
                 Console.Clear();
-                var teste = false;
+                var nomeValido = false;
 
-                while (teste == false)
+                while (nomeValido == false)
                 {
                     Console.Write("Informe o nome: ");
                     var nome = Console.ReadLine().Trim();
@@ -64,17 +64,17 @@ namespace Entra21.ExerciciosVetoresComplementares
                     }
                     else
                     {
-                        nomesVetor1[i] = nome;                        
-                        teste = true;
+                        nomesDesordenados[i] = nome;                        
+                        nomeValido = true;
                     }
                 }
             }
 
-            var nomesVetor2 = new string[quantidadeNomes];
+            var nomesOrdenados = new string[quantidadeNomes];
 
-            for (var i = 0; i < nomesVetor2.Length; i++)
+            for (var i = 0; i < nomesOrdenados.Length; i++)
             {
-                nomesVetor2[i] = nomesVetor1[(quantidadeNomes - i - 1)];
+                nomesOrdenados[i] = nomesDesordenados[(quantidadeNomes - i - 1)];
             }
 
             Console.Clear();            
@@ -82,7 +82,7 @@ namespace Entra21.ExerciciosVetoresComplementares
 
             for (var i = 0; i < quantidadeNomes; i++)
             {
-                table.AddRow(nomesVetor1[i], nomesVetor2[i]);
+                table.AddRow(nomesDesordenados[i], nomesOrdenados[i]);
             }
 
             table.Write(Format.Alternative);

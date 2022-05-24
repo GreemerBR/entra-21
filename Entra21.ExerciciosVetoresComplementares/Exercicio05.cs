@@ -14,8 +14,9 @@ namespace Entra21.ExerciciosVetoresComplementares
         {
             Console.Clear();
             var quantidadeNumeros = 0;
+            var quantidadeValida = false;
 
-            while (quantidadeNumeros <= 0)
+            while (quantidadeValida == false)
             {
                 try
                 {
@@ -27,6 +28,10 @@ namespace Entra21.ExerciciosVetoresComplementares
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O valor informado não é valido. Por favor informe um número inteiro maior que zero.");
                         Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                    else
+                    {
+                        quantidadeValida = true;
                     }
                 }
                 catch (Exception ex)
@@ -41,9 +46,9 @@ namespace Entra21.ExerciciosVetoresComplementares
 
             for (var i = 0; i < quantidadeNumeros; i++)
             {
-                var teste = false;
+                var numeroValido = false;
 
-                while (teste == false)
+                while (numeroValido == false)
                 {
                     try
                     {
@@ -51,7 +56,7 @@ namespace Entra21.ExerciciosVetoresComplementares
                         var numero = Convert.ToDouble(Console.ReadLine());
 
                         numeros[i] = numero;
-                        teste = true;
+                        numeroValido = true;
                     }
                     catch (Exception ex)
                     {
@@ -76,7 +81,17 @@ namespace Entra21.ExerciciosVetoresComplementares
                 }
 
                 numerosOrdemCrescente[contador] = numeros[i];
+
             }
+
+            for (var i = 0; i < quantidadeNumeros; i++)
+            {
+                if (numerosOrdemCrescente[i] == 0)
+                {
+                    numerosOrdemCrescente[i] = numerosOrdemCrescente[i - 1];
+                }
+            }
+
 
             var table = new ConsoleTable("Números em ordem crescente");
 
