@@ -45,7 +45,7 @@ namespace Entra21.ExerciciosVetoresComplementares
                         }
                         else
                         {
-                            i--;
+                            numeroValido = false;
                         }
                     }
                     catch (Exception ex)

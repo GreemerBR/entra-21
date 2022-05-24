@@ -78,6 +78,14 @@ namespace Entra21.ExerciciosVetoresComplementares
                 numerosOrdemDecrescente[contador] = numeros[i];
             }
 
+            for (var i = 0; i < quantidadeNumeros; i++)
+            {
+                if (numerosOrdemDecrescente[i] == 0)
+                {
+                    numerosOrdemDecrescente[i] = numerosOrdemDecrescente[i - 1];
+                }
+            }
+
             var table = new ConsoleTable("Números em ordem decrescente");
 
             for (var i = 0; i < quantidadeNumeros; i++)
