@@ -77,9 +77,9 @@ Informe a opção desejada: ");
          exercicio06.Executar();
      }
 
-     /*if (opcaoDesejada == 7)
+     if (opcaoDesejada == 7)
      {
          var exercicio07 = new Exercicio07();
          exercicio07.Executar();
-     }*/
+     }
 }
