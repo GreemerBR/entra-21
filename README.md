@@ -4,14 +4,14 @@
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#fundamentos-c#">Fundamentos C#</a> • 
+ <a href="#fundamentos">Fundamentos</a> • 
  <a href="#if">If</a> • 
- <a href="#metodos-string">Métodos String</a> •
+ <a href="#métodos-string">Métodos string</a> •
  <a href="#while">While</a> •
  <a href="#for">For</a> •
  <a href="#try-catch">Try Catch</a> •
  <a href="#vetores">Vetores</a> •
- <a href="#orientacao-a-objetos">Orientação a Objetos</a> •
+ <a href="#orientação-a-objetos">Orientação a Objetos</a> •
  <a href="#autor">Autor</a>
 </p>
 
@@ -30,7 +30,7 @@ As seguintes ferramentas foram usadas durante as aulas:
 * [<b>.NET 6.0</b>](https://dotnet.microsoft.com/en-us/download);
 * <b>GitHub</b>.
   
-## _FUNDAMENTOS C#_
+## _FUNDAMENTOS_
 
 * As aulas de 18 a 22/04/2022 foram sobre os Fundamentos de C#.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosFundamentosCSharp);
