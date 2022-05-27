@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoObjetos.Tests", "Entra21.ExemplosOrientacaoObjetos.Tests\Entra21.ExemplosOrientacaoObjetos.Tests.csproj", "{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExercicioOrientacaoObjetos", "Entra21.ExercicioOrientacaoObjetos\Entra21.ExercicioOrientacaoObjetos.csproj", "{5B5AF048-99DD-4D35-91C9-AA6FD6409325}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
