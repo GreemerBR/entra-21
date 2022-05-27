@@ -2,7 +2,7 @@
 
 int opcaoDesejada = 0;
 
-while (opcaoDesejada != 6)
+while (opcaoDesejada != 8)
 {
 
     Console.WriteLine(@"
