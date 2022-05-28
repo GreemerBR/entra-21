@@ -20,13 +20,13 @@ namespace Entra21.ExercicioOrientacaoObjetos.Livros
             Console.Write("Título do livro: ");
             livro.Titulo = Console.ReadLine().Trim();
 
-            Console.Write("O nomeValido do autor do livro: ");
+            Console.Write("O nome do autor do livro: ");
             livro.Autor = nomeValido.ObterNome();
 
             Console.Write("O idioma original em que o livro foi escrito: ");
             livro.IdiomaOriginal = nomeValido.ObterNome();
 
-            Console.Write("O código ISBN do livro");
+            Console.Write("O código ISBN do livro: ");
             livro.CodigoIsbn = Console.ReadLine().Trim();
 
             Console.Write("A quantidade de páginas totais do livro: ");
@@ -46,9 +46,12 @@ namespace Entra21.ExercicioOrientacaoObjetos.Livros
             var anoLancamento = Convert.ToInt32(dataLancamento.Substring(4, 4));
             livro.DataLancamento = new DateTime(anoLancamento, mesLancamento, diaLancamento);
 
-            livro.ApresentarAutor();
-            livro.ApresentarQuantidadePaginasLidasNoTotal();
-            livro.ApresentarQuantidadePaginasParaLer();
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine(livro.ApresentarTituloAutor());
+            Console.WriteLine(livro.ApresentarQuantidadePaginasLidasNoTotal());
+            Console.WriteLine(livro.ApresentarQuantidadePaginasParaLer());
+            Console.WriteLine(livro.ApresentarQuantidadeAnosAposPublicacao());
         }
     }
 }
