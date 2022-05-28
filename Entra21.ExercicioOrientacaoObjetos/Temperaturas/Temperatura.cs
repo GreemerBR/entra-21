@@ -13,7 +13,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
 
         public double CalcularCelsiusParaKelvin()
         {
-            var temperaturaEmKelvin = ValorTemperatura + 273;
+            var temperaturaEmKelvin = ValorTemperatura + 273.15;
 
             return temperaturaEmKelvin;
         }
@@ -27,7 +27,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
 
         public double CalcularKelvinParaCelsius()
         {
-            var temperaturaEmCelsiu = ValorTemperatura - 273;
+            var temperaturaEmCelsiu = ValorTemperatura - 273.15;
 
             return temperaturaEmCelsiu;
         }
