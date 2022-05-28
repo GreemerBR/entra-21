@@ -12,8 +12,8 @@ namespace Entra21.ExercicioOrientacaoObjetos.Livros
         public void Executar()
         {
             var livro = new Livro();
-            var nomeValido = new NomeValido();
-            var numeroValido = new NumerosInteirosPositivosValidos();
+            var nomePessoaValido = new NomesPessoasValidos();
+            var numeroInteiroValido = new NumerosInteirosPositivosValidos();
 
             Console.WriteLine("Por favor, informe os dados solicitados abaixo: ");
 
@@ -21,22 +21,22 @@ namespace Entra21.ExercicioOrientacaoObjetos.Livros
             livro.Titulo = Console.ReadLine().Trim();
 
             Console.Write("O nome do autor do livro: ");
-            livro.Autor = nomeValido.ObterNome();
+            livro.Autor = nomePessoaValido.ObterNome();
 
             Console.Write("O idioma original em que o livro foi escrito: ");
-            livro.IdiomaOriginal = nomeValido.ObterNome();
+            livro.IdiomaOriginal = nomePessoaValido.ObterNome();
 
             Console.Write("O código ISBN do livro: ");
             livro.CodigoIsbn = Console.ReadLine().Trim();
 
             Console.Write("A quantidade de páginas totais do livro: ");
-            livro.QuantidadePaginas = numeroValido.ObterNumeroInteiroPositivoValido();
+            livro.QuantidadePaginas = numeroInteiroValido.ObterNumeroInteiroPositivoValido();
 
             Console.Write("A quantidade de página(s) que já foi(ram) lida(s): ");
-            livro.QuantidadePaginasLidas = numeroValido.ObterNumeroInteiroPositivoValido();
+            livro.QuantidadePaginasLidas = numeroInteiroValido.ObterNumeroInteiroPositivoValido();
 
             Console.Write("A quantidade de vezes que o livro já foi relido: ");
-            livro.QuantidadeReleituras = numeroValido.ObterNumeroInteiroPositivoValido();
+            livro.QuantidadeReleituras = numeroInteiroValido.ObterNumeroInteiroPositivoValido();
 
             Console.Write("A data de lançamento do livro (dd/mm/aaaa): ");
             var dataLancamento = Console.ReadLine().Trim();
@@ -47,7 +47,6 @@ namespace Entra21.ExercicioOrientacaoObjetos.Livros
             livro.DataLancamento = new DateTime(anoLancamento, mesLancamento, diaLancamento);
 
             Console.Clear();
-            Console.WriteLine();
             Console.WriteLine(livro.ApresentarTituloAutor());
             Console.WriteLine(livro.ApresentarQuantidadePaginasLidasNoTotal());
             Console.WriteLine(livro.ApresentarQuantidadePaginasParaLer());

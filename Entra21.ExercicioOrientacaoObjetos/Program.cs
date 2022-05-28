@@ -1,4 +1,5 @@
 ﻿using Entra21.ExercicioOrientacaoObjetos.Livros;
+using Entra21.ExercicioOrientacaoObjetos.Temperaturas;
 
 var opcaoDesejada = 0;
 
@@ -8,7 +9,7 @@ while (opcaoDesejada != 6)
     Console.WriteLine(@"
 -------------MENU-------------
 1 - Exercício Livro
-2 - Exercício ??
+2 - Exercício Temperatura
 3 - Exercício ??
 4 - Exercício ??
 5 - Exercício ??
@@ -43,5 +44,11 @@ while (opcaoDesejada != 6)
 
         var exercicioLivro = new ExercicioLivro();
         exercicioLivro.Executar();
+    }
+
+    if(opcaoDesejada == 2)
+    {
+        var exercicioTemperatura = new ExercicioTemperatura();
+        exercicioTemperatura.Executar();
     }
 }

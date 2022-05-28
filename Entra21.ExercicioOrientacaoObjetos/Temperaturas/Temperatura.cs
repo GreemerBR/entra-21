@@ -25,7 +25,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
             return temperaturaEmFahrenheit;
         }
 
-        public double CalcularKelvinParaCelsiu()
+        public double CalcularKelvinParaCelsius()
         {
             var temperaturaEmCelsiu = ValorTemperatura - 273;
 
@@ -34,7 +34,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
 
         public double CalcularKelvinParaFahrenheit()
         {
-            var temperaturaEmCelsius = CalcularKelvinParaCelsiu();
+            var temperaturaEmCelsius = CalcularKelvinParaCelsius();
             ValorTemperatura = temperaturaEmCelsius;
             var temperaturaEmFahrenheit = CalcularCelsiusParaFahrenheit();
 
@@ -50,7 +50,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
 
         public double CalcularFahrenheitParaKelvin()
         {
-            var temperaturaEmCelsius = FahrenheitParaCelsius();
+            var temperaturaEmCelsius = CalcularFahrenheitParaCelsius();
             ValorTemperatura = temperaturaEmCelsius;
             var temperaturaEmKelvin = CalcularCelsiusParaKelvin();
 
@@ -65,11 +65,11 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
             }
             else if (TemperaturaOrigem.StartsWith("C") && TemperaturaDestino.StartsWith("F"))
             {
-                return $"Temperatura convertida: {CalcularCelsiusParaFahrenheit()}F.";
+                return $"Temperatura convertida: {CalcularCelsiusParaFahrenheit().ToString("F")}F.";
             }
             else if (TemperaturaOrigem.StartsWith("C") && TemperaturaDestino.StartsWith("K"))
             {
-                return $"Temperatura convertida: {CalcularCelsiusParaKelvin()}K.";
+                return $"Temperatura convertida: {CalcularCelsiusParaKelvin().ToString("F")}K.";
             }
             else if (TemperaturaOrigem.StartsWith("F") && TemperaturaDestino.StartsWith("F"))
             {
@@ -77,11 +77,11 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
             }
             else if (TemperaturaOrigem.StartsWith("F") && TemperaturaDestino.StartsWith("K"))
             {
-                return $"Temperatura convertida: {CalcularFahrenheitParaKelvin()}K.";
+                return $"Temperatura convertida: {CalcularFahrenheitParaKelvin().ToString("F")}K.";
             }
             else if (TemperaturaOrigem.StartsWith("F") && TemperaturaDestino.StartsWith("C"))
             {
-                return $"Temperatura convertida: {CalcularFahrenheitParaCelsius()}°C.";
+                return $"Temperatura convertida: {CalcularFahrenheitParaCelsius().ToString("F")}°C.";
             }
             else if (TemperaturaOrigem.StartsWith("K") && TemperaturaDestino.StartsWith("K"))
             {
@@ -89,15 +89,15 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
             }
             else if (TemperaturaOrigem.StartsWith("K") && TemperaturaDestino.StartsWith("F"))
             {
-                return $"Temperatura convertida: {CalcularKelvinParaFahrenheit()}F.";
+                return $"Temperatura convertida: {CalcularKelvinParaFahrenheit().ToString("F")}F.";
             }
             else if (TemperaturaOrigem.StartsWith("K") && TemperaturaDestino.StartsWith("C"))
             {
-                return $"Temperatura convertida: {CalcularKelvinParaCelsiu()}°C.";
+                return $"Temperatura convertida: {CalcularKelvinParaCelsius().ToString("F")}°C.";
             }
             else
             {
-                return $"Opção invalida.";
+                return $"Erro ao determinar as unidades de medida. Temperaturas de origem e destino devem ser Celsius, Fahrenheit ou Kelvin.";
             }
         }
     }

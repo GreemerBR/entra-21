@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExercicioOrientacaoObjetos.TestesDeValidacaoDeInformacoes
 {
-    public class NomeValido
+    public class NomesPessoasValidos
     {
         public string ObterNome()
         {
