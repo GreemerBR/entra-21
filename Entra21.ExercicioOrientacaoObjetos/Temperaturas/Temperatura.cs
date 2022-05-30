@@ -27,9 +27,9 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
 
         public double CalcularKelvinParaCelsius()
         {
-            var temperaturaEmCelsiu = ValorTemperatura - 273.15;
+            var temperaturaEmCelsius = ValorTemperatura - 273.15;
 
-            return temperaturaEmCelsiu;
+            return temperaturaEmCelsius;
         }
 
         public double CalcularKelvinParaFahrenheit()
@@ -61,7 +61,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
         {
             if (TemperaturaOrigem.StartsWith("C") && TemperaturaDestino.StartsWith("C"))
             {
-                return $"Temperatura convertida: {ValorTemperatura}°C.";
+                return $"Temperatura convertida: {ValorTemperatura.ToString("F")}°C.";
             }
             else if (TemperaturaOrigem.StartsWith("C") && TemperaturaDestino.StartsWith("F"))
             {
@@ -73,7 +73,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
             }
             else if (TemperaturaOrigem.StartsWith("F") && TemperaturaDestino.StartsWith("F"))
             {
-                return $"Temperatura convertida: {ValorTemperatura}F.";
+                return $"Temperatura convertida: {ValorTemperatura.ToString("F")}F.";
             }
             else if (TemperaturaOrigem.StartsWith("F") && TemperaturaDestino.StartsWith("K"))
             {
@@ -85,7 +85,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
             }
             else if (TemperaturaOrigem.StartsWith("K") && TemperaturaDestino.StartsWith("K"))
             {
-                return $"Temperatura convertida: {ValorTemperatura}K.";
+                return $"Temperatura convertida: {ValorTemperatura.ToString("F")}K.";
             }
             else if (TemperaturaOrigem.StartsWith("K") && TemperaturaDestino.StartsWith("F"))
             {
