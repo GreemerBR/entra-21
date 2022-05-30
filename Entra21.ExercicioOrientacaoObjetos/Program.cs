@@ -1,4 +1,5 @@
-﻿using Entra21.ExercicioOrientacaoObjetos.Livros;
+﻿using Entra21.ExercicioOrientacaoObjetos.ASCIIs;
+using Entra21.ExercicioOrientacaoObjetos.Livros;
 using Entra21.ExercicioOrientacaoObjetos.Temperaturas;
 
 var opcaoDesejada = 0;
@@ -10,7 +11,7 @@ while (opcaoDesejada != 6)
 -------------MENU-------------
 1 - Exercício Livro
 2 - Exercício Temperatura
-3 - Exercício ??
+3 - Exercício ASCII
 4 - Exercício ??
 5 - Exercício ??
 6 - SAIR
@@ -46,9 +47,15 @@ while (opcaoDesejada != 6)
         exercicioLivro.Executar();
     }
 
-    if(opcaoDesejada == 2)
+    if (opcaoDesejada == 2)
     {
         var exercicioTemperatura = new ExercicioTemperatura();
         exercicioTemperatura.Executar();
+    }
+
+    if (opcaoDesejada == 3)
+    {
+        var exercicioAscii = new ExercicioAscii();
+        exercicioAscii.Executar();
     }
 }
