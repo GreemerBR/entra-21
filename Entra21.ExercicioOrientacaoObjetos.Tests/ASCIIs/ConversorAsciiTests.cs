@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Entra21.ExercicioOrientacaoObjetos.Tests.ASCIIs
 {
-    public class AsciiTests
+    public class ConversorAsciiTests
     {
         [Theory]
         [InlineData('A', 65)]
@@ -68,7 +68,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Tests.ASCIIs
         public void Validar_ObterCodigoAsciiDoCaracter(char caracter, int codigoAsciiDecimal)
         {
             // Arrange
-            var ascii = new Ascii();
+            var ascii = new ConversorAscii();
             ascii.Caracter = caracter;
 
             // Act

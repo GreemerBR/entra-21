@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExercicioOrientacaoObjetos.ASCIIs
 {
-    public class Ascii
+    public class ConversorAscii
     {
         public char Caracter;
 

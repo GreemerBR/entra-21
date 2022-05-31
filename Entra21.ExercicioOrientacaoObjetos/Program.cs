@@ -55,7 +55,7 @@ while (opcaoDesejada != 6)
 
     if (opcaoDesejada == 3)
     {
-        var exercicioAscii = new ExercicioAscii();
+        var exercicioAscii = new ExercicioConversorAscii();
         exercicioAscii.Executar();
     }
 }

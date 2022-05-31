@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExercicioOrientacaoObjetos.ASCIIs
 {
-    public class ExercicioAscii
+    public class ExercicioConversorAscii
     {
         public void Executar()
         {
 
-            var ascii = new Ascii();
+            var ascii = new ConversorAscii();
             var caracter = new CaracterEhAlfabetico();
 
             Console.Clear();
