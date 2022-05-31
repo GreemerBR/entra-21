@@ -1,4 +1,5 @@
 ﻿using Entra21.ExercicioOrientacaoObjetos.ASCIIs;
+using Entra21.ExercicioOrientacaoObjetos.Farmacias;
 using Entra21.ExercicioOrientacaoObjetos.Livros;
 using Entra21.ExercicioOrientacaoObjetos.Temperaturas;
 
@@ -12,7 +13,7 @@ while (opcaoDesejada != 6)
 1 - Exercício Livro
 2 - Exercício Temperatura
 3 - Exercício ASCII
-4 - Exercício ??
+4 - Exercício Farmácia
 5 - Exercício ??
 6 - SAIR
 ");
@@ -57,5 +58,11 @@ while (opcaoDesejada != 6)
     {
         var exercicioAscii = new ExercicioConversorAscii();
         exercicioAscii.Executar();
+    }
+
+    if (opcaoDesejada == 4)
+    {
+        var exercicioFarmacia = new ExercicioFarmacia();
+        exercicioFarmacia.Executar();
     }
 }
