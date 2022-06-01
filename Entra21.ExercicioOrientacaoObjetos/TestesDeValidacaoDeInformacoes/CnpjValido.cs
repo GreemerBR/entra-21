@@ -8,7 +8,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.TestesDeValidacaoDeInformacoes
 {
     public class CnpjValido
     {
-        public int ObterCnpj()
+        public long ObterCnpj()
         {
             var cnpj = Console.ReadLine().Trim().Replace(".", "").Replace("/", "").Replace("-", "");
             var testeCnpjValido = false;
@@ -29,7 +29,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.TestesDeValidacaoDeInformacoes
                 }
             }
 
-            var cnpjNumerico = Convert.ToInt32(cnpj);
+            var cnpjNumerico = Convert.ToInt64(cnpj);
             return cnpjNumerico;
         }
     }

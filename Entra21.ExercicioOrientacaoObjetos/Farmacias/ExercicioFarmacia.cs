@@ -27,8 +27,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
 
             for (var i = 0; i < 3; i++)
             {
-                Console.Clear();
-                Console.WriteLine();
+                Console.Clear();                
                 Console.Write("Informe o nome do produto: ");
                 farmacia.NomeProduto[i] = nome.ObterNome();
 
@@ -51,8 +50,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
                 table.AddRow("11", "Anti Inflamatórios Esteroidais");
                 table.AddRow("12", "Droga Anti Reumática Modificadora de Doença");
                 table.Write(Format.Minimal);
-
-                Console.WriteLine();
+                                
                 Console.Write("Informe o código da categoria: ");
                 farmacia.CategoriaProduto[i] = nomeCategoria();
             }
@@ -65,9 +63,13 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
 
             Console.Clear();
             Console.WriteLine(totalPedido);
+            Console.WriteLine();
             Console.WriteLine(totalPedidoPorCategoria);
+            Console.WriteLine();
             Console.WriteLine(quantidadeCategoria);
+            Console.WriteLine();
             Console.WriteLine(produtoMaisCaro);
+            Console.WriteLine();
             Console.WriteLine(produtoMaisBarato);
         }
 
