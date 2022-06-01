@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExercicioOrientacaoObjetos", "Entra21.ExercicioOrientacaoObjetos\Entra21.ExercicioOrientacaoObjetos.csproj", "{5B5AF048-99DD-4D35-91C9-AA6FD6409325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExercicioOrientacaoObjetos.Tests", "Entra21.ExercicioOrientacaoObjetos.Tests\Entra21.ExercicioOrientacaoObjetos.Tests.csproj", "{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExercicioOrientacaoObjetos.Tests", "Entra21.ExercicioOrientacaoObjetos.Tests\Entra21.ExercicioOrientacaoObjetos.Tests.csproj", "{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
