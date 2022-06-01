@@ -46,7 +46,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
                     totalAnalgesicos = totalAnalgesicos + PrecoProduto[i];
                 }
 
-                if (CategoriaProduto[i] == "antibiótico")
+                if (CategoriaProduto[i] == "antibióticos")
                 {
                     totalAntibioticos = totalAntibioticos + PrecoProduto[i];
                 }
@@ -64,11 +64,6 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
                 if (CategoriaProduto[i] == "anticancerosos")
                 {
                     totalAnticancerosos = totalAnticancerosos + PrecoProduto[i];
-                }
-
-                if (CategoriaProduto[i] == "antiepilépticos")
-                {
-                    totalAntiepilepticos = totalAntiepilepticos + PrecoProduto[i];
                 }
 
                 if (CategoriaProduto[i] == "antiepilépticos")
@@ -126,7 +121,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
 
             if (totalAntidepressivos != 0.0)
             {
-                textoSaida = textoSaida + $"* Total Antidmmepressivos: R${totalAntidepressivos.ToString("F")}\n";
+                textoSaida = textoSaida + $"* Total Antidepressivos: R${totalAntidepressivos.ToString("F")}\n";
             }
 
             if (totalAnticancerosos != 0.0)
@@ -194,7 +189,7 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
                     totalAnalgesicos = totalAnalgesicos + 1;
                 }
 
-                if (CategoriaProduto[i] == "antibiótico")
+                if (CategoriaProduto[i] == "antibióticos")
                 {
                     totalAntibioticos = totalAntibioticos + 1;
                 }
@@ -212,11 +207,6 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
                 if (CategoriaProduto[i] == "anticancerosos")
                 {
                     totalAnticancerosos = totalAnticancerosos + 1;
-                }
-
-                if (CategoriaProduto[i] == "antiepilépticos")
-                {
-                    totalAntiepilepticos = totalAntiepilepticos + 1;
                 }
 
                 if (CategoriaProduto[i] == "antiepilépticos")
@@ -331,9 +321,14 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
                     maiorValor = PrecoProduto[i];
                     produtoMaisCaro = NomeProduto[i];
                 }
+                else if (PrecoProduto[i] == maiorValor)
+                {
+                    maiorValor = PrecoProduto[i];
+                    produtoMaisCaro = produtoMaisCaro + " / " + NomeProduto[i];
+                }
             }
 
-            return $"O produto mais caro do pedido é o {produtoMaisCaro} e ele custa R${maiorValor.ToString("F")}.";
+            return $"O(s) produto(s) mais caro(s) do pedido é(são): {produtoMaisCaro}, e ele(s) custa(m) R${maiorValor.ToString("F")}.";
         }
 
         public string ApresentarNomeCategoriaProdutoMaisBarato()
@@ -350,9 +345,14 @@ namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
                     produtoMaisBarato = NomeProduto[i];
                     categoriaMaisBarato = CategoriaProduto[i];
                 }
+                else if (PrecoProduto[i] == menorValor)
+                {
+                    menorValor = PrecoProduto[i];
+                    produtoMaisBarato = produtoMaisBarato + " / " + NomeProduto[i];
+                    categoriaMaisBarato = categoriaMaisBarato + " / " + CategoriaProduto[i];
+                }
             }
 
-            return $"O produto mais barato do pedido é o {produtoMaisBarato} e ele é da categoria {categoriaMaisBarato}.";
+            return $"O(s) produto(s) mais barato(s) do pedido é(são): {produtoMaisBarato}, e ele(s) é(são) da(s) categoria(s) {categoriaMaisBarato}.";
         }
     }
-}
