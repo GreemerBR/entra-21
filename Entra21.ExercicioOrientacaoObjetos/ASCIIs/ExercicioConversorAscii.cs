@@ -9,6 +9,13 @@ namespace Entra21.ExercicioOrientacaoObjetos.ASCIIs
 {
     public class ExercicioConversorAscii
     {
+        /* Criar uma classe chamada ConversorAscii
+         *   ● Caracter
+         *  Criar métodos:
+         *   ● Obter código ascii do caracter.Levar em consideração que pode ser em caixa alta ou caixa baixa.
+         *  Obs.: É obrigatório fazer os ifs para descobrir o código ascii.
+         *  Obs.: Criar testes unitários, assim como, ExercicioConversorAscii.
+         */
         public void Executar()
         {
 

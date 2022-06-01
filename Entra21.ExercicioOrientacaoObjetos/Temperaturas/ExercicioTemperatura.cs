@@ -9,6 +9,30 @@ namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
 {
     public class ExercicioTemperatura
     {
+        /* Criar uma classe chamada Temperatura, armazenar as seguintes propriedades:
+         *   ● temperatura de origem
+         *   ● Temperatura de destino
+         *   ● Valor da temperatura
+         *  Criar métodos:
+         *   ● Calcular Celsius para Kelvin
+         *   ● Calcular Celsius para Fahrenheit
+         *   ● Calcular Kelvin para Celsius
+         *   ● Calcular Kelvin para Fahrenheit
+         *   ● Calcular Fahrenheit para Celsius
+         *   ● Calcular Fahrenheit para Kelvin
+         *   ● Obter temperatura convertida
+         *  Exemplo:
+         *  Input:
+         *   Temperatura origem: usuário digitou ‘Celcius’
+         *   Temperatura destino: usuário digitou ‘Fahrenheit’
+         *   Temperatura valor: usuário digitou 42.30;
+         *  Processamento:
+         *   Deve-se executar o método ‘Calcular Celsius para Fahrenheit’, pois de acordo com origem e
+         *   destino deve executar este método.
+         *  Output:
+         *   Temperatura convertida: 108,14
+         *  Obs.: Criar testes unitários, assim como, ExercicioTemperatura.
+         */
         public void Executar()
         {
             var temperatura = new Temperatura();

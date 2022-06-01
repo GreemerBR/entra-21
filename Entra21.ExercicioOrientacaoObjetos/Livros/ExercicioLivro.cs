@@ -9,6 +9,23 @@ namespace Entra21.ExercicioOrientacaoObjetos.Livros
 {
     public class ExercicioLivro
     {
+        /* Crie uma classe chamada Livro para armazenar as seguintes informações
+         *   ● Título
+         *   ● Autor
+         *   ● Código ISBN
+         *   ● Idioma original
+         *   ● Data de lançamento
+         *   ● Quantidade de páginas
+         *   ● Quantidade de páginas lidas
+         *   ● Quantidade de releituras
+         *  Crie os seguintes métodos:
+         *   ● ApresentarTituloAutor
+         *   ● ApresentarQuantidadePaginasParaLer
+         *   ● ApresentarQuantidadePaginasLidasNoTotal
+         *   ● ApresentarQuantidadeAnosAposPublicação
+         *  Criar classe de ExercicioLivro que instancie o livro e atribua valor para suas propriedades, assim como chamar os métodos.
+         *  Não deve criar testes unitários.
+         */
         public void Executar()
         {
             var livro = new Livro();
