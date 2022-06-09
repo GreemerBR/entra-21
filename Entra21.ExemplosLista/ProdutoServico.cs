@@ -6,9 +6,10 @@
 
         // Armazenar o código do próximo produto
         private int codigoAtual = 1;
-        
-        // encapsulamento + tipoRetorno + NomeMetodo(parametros)
+
+        // Assinatura do método: composto por encapsulamento encapsulamento + tipoRetorno + NomeMetodo(parametros)
         public void Adicionar(string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
+        // Tudo entre as {} é chamado de corpo do método
         {
             // Instanciar um objeto da classe Produto
             Produto produto = new Produto();
@@ -28,9 +29,26 @@
             // Adicionar o produto instanciado na lista de produtos
             produtos.Add(produto);
         }
-        public void Editar()
+        public bool Editar(int codigoParaAlterar, string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
         {
+            // Obtém o produto desejado da lista de produto
+            Produto produtoParaAlterar = ObterPorCodigo(codigoParaAlterar);
 
+            // Verifica se não foi possível encontrar o produto
+            if (produtoParaAlterar == null)
+            {
+                // Retorna falso porque não existe produto com o código dos parâmetros
+                return false;
+            }
+
+            // Atualiza as propriedade (campos) do produto desejado
+            produtoParaAlterar.Nome = nome;
+            produtoParaAlterar.Localizacao = localizacao;
+            produtoParaAlterar.PrecoUnitario = precoUnitario;
+            produtoParaAlterar.Quantidade = quantidade;
+
+            // Retorna verdadeiro porque foi possível alterar o produto
+            return true;
         }
         public bool Apagar(int codigo)
         {
