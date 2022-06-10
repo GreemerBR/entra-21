@@ -37,7 +37,7 @@
             if (trianguloParaAlterar == null)
             {
                 return false;
-            }            
+            }
 
             trianguloParaAlterar.Lado1 = lado1;
             trianguloParaAlterar.Lado2 = lado2;
@@ -46,14 +46,38 @@
             return true;
         }
 
-        private Triangulo ObterPorCodigo(int codigo)
+        public bool Apagar(int codigo)
+        {
+            Triangulo trianguloParaRemover = ObterPorCodigo(codigo);
+
+            if (trianguloParaRemover == null)
+            {
+                return false;
+            }
+
+            triangulos.Remove(trianguloParaRemover);
+
+            return true;
+        }
+
+        public List<Triangulo> ObterTodos()
+        {
+            return triangulos;
+        }
+
+        public Triangulo ObterPorCodigo(int codigo)
         {
             for (var i = 0; i < triangulos.Count; i++)
             {
                 var trianguloAtual = triangulos[i];
 
-                if ()
+                if (trianguloAtual.Codigo == codigo)
+                {
+                    return trianguloAtual;
+                }
             }
+
+            return null;
         }
     }
 }
