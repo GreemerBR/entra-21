@@ -13,6 +13,7 @@
  <a href="#try-catch">Try Catch</a> •
  <a href="#vetores">Vetores</a> •
  <a href="#orientação-a-objetos">Orientação a Objetos</a> •
+ <a href="#listas">Listas</a> •
  <a href="#autor">Autor</a>
 </p>
 
