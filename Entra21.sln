@@ -41,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientaca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosLista", "Entra21.ExemplosLista\Entra21.ExemplosLista.csproj", "{38B3ADCA-327F-40F7-A1E7-13B679AA620A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21SegurancaDosObjetos", "Entra21SegurancaDosObjetos\Entra21SegurancaDosObjetos.csproj", "{1490FBDC-AA92-45DE-982D-09F110B51957}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.SegurancaDosObjetos", "Entra21SegurancaDosObjetos\Entra21.SegurancaDosObjetos.csproj", "{1490FBDC-AA92-45DE-982D-09F110B51957}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
