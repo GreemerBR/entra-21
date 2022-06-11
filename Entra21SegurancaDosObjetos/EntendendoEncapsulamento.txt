@@ -1,0 +1,57 @@
+﻿Tipos de Encapsulamento vistos
+
+* public: o acesso não é restrito;
+* internal: o acesso é limitado ao projeto;
+* private: o acesso é limitado a classe.
+
+Classes sempre são public ou internal
+
+namespace ProjetoA
+{
+	Class A
+	{
+		public void A1()
+		{
+			A2();
+		}
+		private void A2()
+		{
+		B b = new B();
+		b.B1();
+		}
+		private void A3()
+		{
+		}
+		internal void A4();
+		{
+		}
+	}
+}
+
+namespace ProjetoA
+{
+	Class B
+	{
+		internal void B1()
+		{
+			A a = new A();
+			a.A1();
+			a.A4();
+		}
+		private void B2()
+		{
+		}
+	}
+}
+
+namespace ProjetoB
+{
+	Class C
+	{
+		public void C1()
+		{
+			A a = new A();
+			a.A1();			
+		}		
+	}
+}
