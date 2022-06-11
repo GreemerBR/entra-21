@@ -50,30 +50,34 @@ As seguintes ferramentas foram usadas durante as aulas:
 
 * As aulas de 02 a 11/05/2022 foram sobre o uso do WHILE.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosWhile).
-* Os exercícios da Lista 3 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosWhile).
+* Os exercícios da Lista 3 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosWhile).
 
 ## _FOR_
 
 * As aulas de 12/05/2022 foram sobre o uso do FOR.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosFor);
-* Os exercícios refeitos da Lista 3 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosForComTryCatch).
+* Os exercícios refeitos da Lista 3 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosForComTryCatch).
 
 ## _TRY CATCH_
 
 * As aulas de 13 a 18/05/2022 foram sobre o uso do TRY CATCH.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosTryCatch);
-* Os exercícios refeitos da Lista 3 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosForComTryCatch).
+* Os exercícios refeitos da Lista 3 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosForComTryCatch).
 
 ## _VETORES_
 
 * As aulas de 19 e 20/05/2022 foram sobre o uso do VETORES.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosTryCatch);
 * Os exercícios da Lista 4 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosVetor);
-* E os exercícios complementares da Lista 4 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosVetoresComplementares). 
+* E os exercícios complementares da Lista 4 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosVetoresComplementares). 
 
 ## _ORIENTAÇÃO A OBJETOS_
 
-* As aulas a partir de 23/05/2022 estão sendo sobre ORIENTAÇÃO A OBJETOS.
+* As aulas a partir de 23/05/2022 a 03/06/2022 foram sobre ORIENTAÇÃO A OBJETOS.
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosOrientacaoObjetos);
+* Os testes unitários dos exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosOrientacaoObjetos.Tests);
+* Os exercícios da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosOrientacaoObjetos);
+* Os testes unitários da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosOrientacaoObjetos.Tests).
   
 ## _Autor_
 
