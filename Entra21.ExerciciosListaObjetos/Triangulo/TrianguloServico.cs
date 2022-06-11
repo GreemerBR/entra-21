@@ -6,14 +6,15 @@
 
         private int codigoAtual = 1;
 
-        public bool Adicionar(int lado1, int lado2, int lado3)
+        public bool Adicionar(int lado1, int lado2, int lado3, TrianguloTipo tipoTriangulo)
         {
             Triangulo triangulo = new Triangulo();
 
             triangulo.Lado1 = lado1;
             triangulo.Lado2 = lado2;
             triangulo.Lado3 = lado3;
-
+            triangulo.Tipo = tipoTriangulo;
+            
             if (triangulo.ValidarTriangulo() == true)
             {
                 triangulo.Codigo = codigoAtual;
@@ -30,7 +31,7 @@
             }
         }
 
-        public bool Editar(int codigo, int lado1, int lado2, int lado3)
+        public bool Editar(int codigo, int lado1, int lado2, int lado3, TrianguloTipo tipoTriangulo)
         {
             Triangulo trianguloParaAlterar = ObterPorCodigo(codigo);
 
@@ -42,8 +43,20 @@
             trianguloParaAlterar.Lado1 = lado1;
             trianguloParaAlterar.Lado2 = lado2;
             trianguloParaAlterar.Lado3 = lado3;
+            trianguloParaAlterar.Tipo = tipoTriangulo;
 
-            return true;
+            if (trianguloParaAlterar.ValidarTriangulo() == true)
+            {
+                trianguloParaAlterar.Codigo = codigoAtual;
+
+                triangulos.Add(trianguloParaAlterar);
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool Apagar(int codigo)
