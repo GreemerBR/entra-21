@@ -1,4 +1,4 @@
-﻿namespace Entra21.ExemplosListaObjetos
+﻿namespace Entra21.ExemplosListaObjetos.Produtos
 {
     internal class Produto
     {

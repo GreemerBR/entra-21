@@ -1,4 +1,4 @@
-﻿namespace Entra21.ExemplosListaObjetos
+﻿namespace Entra21.ExemplosListaObjetos.Produtos
 {
     internal class ProdutoControlador
     {
@@ -53,9 +53,9 @@
                     Console.WriteLine(@"
 Aperte alguma tecla para continuar.");
                     Console.ReadKey();
-                }                
+                }
             }
-        }        
+        }
 
         private int ApresentarMenu()
         {

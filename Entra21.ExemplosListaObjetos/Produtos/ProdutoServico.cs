@@ -1,4 +1,4 @@
-﻿namespace Entra21.ExemplosListaObjetos
+﻿namespace Entra21.ExemplosListaObjetos.Produtos
 {
     internal class ProdutoServico
     {
@@ -29,7 +29,7 @@
             // Adicionar o produto instanciado na lista de produtos
             produtos.Add(produto);
         }
-        
+
         public bool Editar(int codigoParaAlterar, string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
         {
             // Obtém o produto desejado da lista de produto
@@ -51,7 +51,7 @@
             // Retorna verdadeiro porque foi possível alterar o produto
             return true;
         }
-        
+
         public bool Apagar(int codigo)
         {
             for (var i = 0; i < produtos.Count; i++)
@@ -77,12 +77,12 @@
             // Retorna falso porque não foi encontrado produto com o código desejad, ou seja, nenhum elemento foi removido da lista
             return false;
         }
-        
+
         public List<Produto> ObterTodos()
         {
             return produtos;
         }
-       
+
         public Produto ObterPorCodigo(int codigo)
         {
             // Percorrer todos os elementos para encontrar o produto filtrndo por código
@@ -179,7 +179,7 @@
             {
                 // Obtém o produto atual da lista de produtos
                 var produto = produtos[i];
-                
+
                 // Verifica se a localização do produto atual é o Armazem
                 if (produto.Localizacao == ProdutoLocalizacao.Armazem)
                 {
