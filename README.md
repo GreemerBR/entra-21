@@ -76,8 +76,8 @@ As seguintes ferramentas foram usadas durante as aulas:
 * As aulas a partir de 23/05/2022 a 03/06/2022 foram sobre ORIENTAÇÃO A OBJETOS.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosOrientacaoObjetos);
 * Os testes unitários dos exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosOrientacaoObjetos.Tests);
-* Os exercícios da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosOrientacaoObjetos);
-* Os testes unitários da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosOrientacaoObjetos.Tests).
+* Os exercícios da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExercicioOrientacaoObjetos);
+* Os testes unitários da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExercicioOrientacaoObjetos.Tests).
   
 ## _Autor_
 
