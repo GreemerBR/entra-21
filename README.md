@@ -14,6 +14,7 @@
  <a href="#vetores">Vetores</a> •
  <a href="#orientação-a-objetos">Orientação a Objetos</a> •
  <a href="#listas">Listas</a> •
+ <a href="#encapsulamento">Encapsulamento</a> •
  <a href="#autor">Autor</a>
 </p>
 
@@ -88,6 +89,10 @@ As seguintes ferramentas foram usadas durante as aulas:
 * Os exercícios da Lista 6 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosLista);
 * Os exemplos de lista de Objetos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosListaObjetos);
 * Os exercícios da Lista 7 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosListaObjetos).
+
+## _ENCAPSULAMENTO_
+
+* O conteúdo e exemplo passado em sala para entendiento da segunranã dos objetos por meio do encapsulamento está [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.SegurancaDosObjetos).
   
 ## _Autor_
 
