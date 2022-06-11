@@ -82,7 +82,7 @@ As seguintes ferramentas foram usadas durante as aulas:
 ## _LISTAS_
 
 * As aulas a partir de 06/06/2022 estão sendo sobre Listas (Tipos Primitivos e de Objetos)).
-* O exemplo de lista com tipo primitivo estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosLista);
+* O exemplo de lista com tipo primitivo está armazenado [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosLista);
 * Os exercícios da Lista 6 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosLista);
 * Os exemplos de lista de Objetos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosListaObjetos);
 * Os exercícios da Lista 7 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosListaObjetos).
