@@ -78,6 +78,14 @@ As seguintes ferramentas foram usadas durante as aulas:
 * Os testes unitários dos exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosOrientacaoObjetos.Tests);
 * Os exercícios da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExercicioOrientacaoObjetos);
 * Os testes unitários da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExercicioOrientacaoObjetos.Tests).
+
+## _LISTAS_
+
+* As aulas a partir de 06/06/2022 estão sendo sobre Listas (Tipos Primitivos e de Objetos)).
+* O exemplo de lista com tipo primitivo estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosLista);
+* Os exercícios da Lista 6 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosLista);
+* Os exemplos de lista de Objetos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosListaObjetos);
+* Os exercícios da Lista 7 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosListaObjetos).
   
 ## _Autor_
 
