@@ -29,15 +29,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoObjetos.Tests", "Entra21.ExemplosOrientacaoObjetos.Tests\Entra21.ExemplosOrientacaoObjetos.Tests.csproj", "{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExercicioOrientacaoObjetos", "Entra21.ExercicioOrientacaoObjetos\Entra21.ExercicioOrientacaoObjetos.csproj", "{5B5AF048-99DD-4D35-91C9-AA6FD6409325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientacaoObjetos", "Entra21.ExercicioOrientacaoObjetos\Entra21.ExerciciosOrientacaoObjetos.csproj", "{5B5AF048-99DD-4D35-91C9-AA6FD6409325}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExercicioOrientacaoObjetos.Tests", "Entra21.ExercicioOrientacaoObjetos.Tests\Entra21.ExercicioOrientacaoObjetos.Tests.csproj", "{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientacaoObjetos.Tests", "Entra21.ExercicioOrientacaoObjetos.Tests\Entra21.ExerciciosOrientacaoObjetos.Tests.csproj", "{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosLista", "Entra21.ExerciciosLista\Entra21.ExerciciosLista.csproj", "{470FF705-C2CD-4C68-A119-7E372C77DF49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosListaObjetos", "Entra21.ExemplosLista\Entra21.ExemplosListaObjetos.csproj", "{18C8BAE6-418F-4468-B30F-813C92559F90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosListaObjetos", "Entra21.ExerciciosListaObjetos\Entra21.ExerciciosListaObjetos.csproj", "{BE7EB672-65BB-43A3-84EC-EAF1C8523D85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosListaObjetos", "Entra21.ExerciciosListaObjetos\Entra21.ExerciciosListaObjetos.csproj", "{BE7EB672-65BB-43A3-84EC-EAF1C8523D85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

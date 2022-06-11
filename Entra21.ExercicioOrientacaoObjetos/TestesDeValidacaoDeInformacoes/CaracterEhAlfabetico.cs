@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExercicioOrientacaoObjetos.TestesDeValidacaoDeInformacoes
+namespace Entra21.ExerciciosOrientacaoObjetos.TestesDeValidacaoDeInformacoes
 {
     public class CaracterEhAlfabetico
     {

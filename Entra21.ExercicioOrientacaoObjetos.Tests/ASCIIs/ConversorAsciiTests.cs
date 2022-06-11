@@ -1,4 +1,4 @@
-﻿using Entra21.ExercicioOrientacaoObjetos.ASCIIs;
+﻿using Entra21.ExerciciosOrientacaoObjetos.ASCIIs;
 using FluentAssertions;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Entra21.ExercicioOrientacaoObjetos.Tests.ASCIIs
+namespace Entra21.ExerciciosOrientacaoObjetos.Tests.ASCIIs
 {
     public class ConversorAsciiTests
     {

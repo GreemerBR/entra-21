@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExercicioOrientacaoObjetos.Temperaturas
+namespace Entra21.ExerciciosOrientacaoObjetos.Temperaturas
 {
     public class Temperatura
     {

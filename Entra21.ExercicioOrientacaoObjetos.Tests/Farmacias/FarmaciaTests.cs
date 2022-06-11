@@ -1,4 +1,4 @@
-﻿using Entra21.ExercicioOrientacaoObjetos.Farmacias;
+﻿using Entra21.ExerciciosOrientacaoObjetos.Farmacias;
 using FluentAssertions;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Entra21.ExercicioOrientacaoObjetos.Tests.Farmacias
+namespace Entra21.ExerciciosOrientacaoObjetos.Tests.Farmacias
 {
     public class FarmaciaTests
     {

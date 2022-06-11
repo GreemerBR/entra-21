@@ -1,7 +1,7 @@
-﻿using Entra21.ExercicioOrientacaoObjetos.ASCIIs;
-using Entra21.ExercicioOrientacaoObjetos.Farmacias;
-using Entra21.ExercicioOrientacaoObjetos.Livros;
-using Entra21.ExercicioOrientacaoObjetos.Temperaturas;
+﻿using Entra21.ExerciciosOrientacaoObjetos.ASCIIs;
+using Entra21.ExerciciosOrientacaoObjetos.Farmacias;
+using Entra21.ExerciciosOrientacaoObjetos.Livros;
+using Entra21.ExerciciosOrientacaoObjetos.Temperaturas;
 
 var opcaoDesejada = 0;
 

@@ -1,4 +1,4 @@
-﻿using Entra21.ExercicioOrientacaoObjetos.Temperaturas;
+﻿using Entra21.ExerciciosOrientacaoObjetos.Temperaturas;
 using FluentAssertions;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Entra21.ExercicioOrientacaoObjetos.Tests.Temperaturas
+namespace Entra21.ExerciciosOrientacaoObjetos.Tests.Temperaturas
 {
     public class TemperaturaTests
     {

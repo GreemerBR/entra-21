@@ -1,12 +1,12 @@
 ﻿using ConsoleTables;
-using Entra21.ExercicioOrientacaoObjetos.TestesDeValidacaoDeInformacoes;
+using Entra21.ExerciciosOrientacaoObjetos.TestesDeValidacaoDeInformacoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExercicioOrientacaoObjetos.Farmacias
+namespace Entra21.ExerciciosOrientacaoObjetos.Farmacias
 {
     public class ExercicioFarmacia
     {

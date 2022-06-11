@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExercicioOrientacaoObjetos.ASCIIs
+namespace Entra21.ExerciciosOrientacaoObjetos.ASCIIs
 {
     public class ConversorAscii
     {

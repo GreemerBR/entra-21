@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExercicioOrientacaoObjetos.Boletins
+namespace Entra21.ExerciciosOrientacaoObjetos.Boletins
 {
     public class ExercicioBoletim
     {
