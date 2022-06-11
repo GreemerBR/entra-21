@@ -92,7 +92,7 @@ As seguintes ferramentas foram usadas durante as aulas:
 
 ## _ENCAPSULAMENTO_
 
-* Foi passado no dia 09/06/2022 conteúdo e exemplo para entendiento da segunrança dos objetos por meio do encapsulamento, e ele está [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.SegurancaDosObjetos).
+* No dia 09/06/2022 foi passado conteúdo e exemplo para entendimento da segurança dos objetos por meio do encapsulamento, e ele está [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.SegurancaDosObjetos).
   
 ## _Autor_
 
