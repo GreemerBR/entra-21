@@ -29,10 +29,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientacaoObjetos.Tests", "Entra21.ExemplosOrientacaoObjetos.Tests\Entra21.ExemplosOrientacaoObjetos.Tests.csproj", "{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientacaoObjetos", "Entra21.ExercicioOrientacaoObjetos\Entra21.ExerciciosOrientacaoObjetos.csproj", "{5B5AF048-99DD-4D35-91C9-AA6FD6409325}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientacaoObjetos.Tests", "Entra21.ExercicioOrientacaoObjetos.Tests\Entra21.ExerciciosOrientacaoObjetos.Tests.csproj", "{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosLista", "Entra21.ExerciciosLista\Entra21.ExerciciosLista.csproj", "{470FF705-C2CD-4C68-A119-7E372C77DF49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosListaObjetos", "Entra21.ExerciciosListaObjetos\Entra21.ExerciciosListaObjetos.csproj", "{BE7EB672-65BB-43A3-84EC-EAF1C8523D85}"
@@ -97,14 +93,6 @@ Global
 		{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71BFB264-D9BB-49F0-92A1-A2EFDD58C086}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B5AF048-99DD-4D35-91C9-AA6FD6409325}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBD84CC1-9EB4-4E87-999E-DC9C9DE171A0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{470FF705-C2CD-4C68-A119-7E372C77DF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{470FF705-C2CD-4C68-A119-7E372C77DF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{470FF705-C2CD-4C68-A119-7E372C77DF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
