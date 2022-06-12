@@ -1,6 +1,6 @@
 ﻿namespace Entra21.ExerciciosListaObjetos.Triangulo
 {
-    internal class TrianguloControlador
+    internal class TrianguloController
     {
         private TrianguloServico trianguloServico = new TrianguloServico();
 
@@ -33,7 +33,7 @@
 
                 if (codigo == 4)
                 {
-                    ApresentarTriangulos();
+                    ApresentarTodos();
                 }
 
                 if (codigo == 5)
@@ -116,24 +116,7 @@ Por favor informe um número presente no MENU.
             Console.Write("Por favor informe o tamanho do terceiro lado do triângulo: ");
             var lado3 = Convert.ToInt32(Console.ReadLine().Trim());
 
-            var tipo = "";
-
-            if (lado1 == lado2 && lado1 == lado3)
-            {
-                tipo = "Equilatero";
-            }
-            else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3)
-            {
-                tipo = "Isosceles";
-            }
-            else
-            {
-                tipo = "Escaleno";
-            }
-
-            var tipoTriangulo = ObterTipoTriangulo(tipo);
-
-            var cadastrou = trianguloServico.Adicionar(lado1, lado2, lado3, tipoTriangulo);
+            var cadastrou = trianguloServico.Adicionar(lado1, lado2, lado3);
 
             if (cadastrou == true)
             {
@@ -149,7 +132,7 @@ Não foi possível cadastrar este triângulo, suas medias não são válidas.");
 
         private void Editar()
         {
-            ApresentarTriangulos();
+            ApresentarTodos();
 
             Console.Write("Por favor informe o código do triângulo que você deseja editar: ");
             var codigo = Convert.ToInt32(Console.ReadLine().Trim());
@@ -163,21 +146,6 @@ Não foi possível cadastrar este triângulo, suas medias não são válidas.");
             Console.Write("Por favor informe o tamanho do terceiro lado do triângulo: ");
             var lado3 = Convert.ToInt32(Console.ReadLine().Trim());
 
-            var tipo = "";
-
-            if (lado1 == lado2 && lado1 == lado3)
-            {
-                tipo = "Equilatero";
-            }
-            else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3)
-            {
-                tipo = "Isosceles";
-            }           
-            else
-            {
-                tipo = "Escaleno";
-            }
-
             var codigoExiste = trianguloServico.ObterPorCodigo(codigo);
 
             if (codigoExiste == null)
@@ -185,9 +153,7 @@ Não foi possível cadastrar este triângulo, suas medias não são válidas.");
 
             }
 
-            var tipoTriangulo = ObterTipoTriangulo(tipo);
-
-            var alterou = trianguloServico.Editar(codigo, lado1, lado2, lado3, tipoTriangulo);
+            var alterou = trianguloServico.Editar(codigo, lado1, lado2, lado3);
 
             if (alterou == false)
             {
@@ -203,7 +169,7 @@ Triângulo alterado com sucesso.");
 
         private void Apagar()
         {
-            ApresentarTriangulos();
+            ApresentarTodos();
 
             Console.Write("Por favor informe o código do triângulo que você deseja apagar: ");
             var codigo = Convert.ToInt32(Console.ReadLine().Trim());
@@ -220,25 +186,9 @@ Código digitado não existe.");
                 Console.WriteLine(@"
 Triângulo apagado com sucesso.");
             }
-        }
+        }        
 
-        private TrianguloTipo ObterTipoTriangulo(string tipo)
-        {
-            if (tipo == "Isosceles")
-            {
-                return TrianguloTipo.Isosceles;
-            }
-            else if (tipo == "Equilatero")
-            {
-                return TrianguloTipo.Equilatero;
-            }
-            else
-            {
-                return TrianguloTipo.Escaleno;
-            }
-        }
-
-        private void ApresentarTriangulos()
+        private void ApresentarTodos()
         {
             var triangulos = trianguloServico.ObterTodos();
 
@@ -264,7 +214,7 @@ Tipo: {trianguloAtual.Tipo}
 
         private void ApresentarTriangulo()
         {
-            ApresentarTriangulos();
+            ApresentarTodos();
 
             Console.Write("Digite o código do triângulo a ser detalhado: ");
             var codigo = Convert.ToInt32(Console.ReadLine().Trim());

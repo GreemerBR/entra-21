@@ -6,15 +6,15 @@
 
         private int codigoAtual = 1;
 
-        public bool Adicionar(int lado1, int lado2, int lado3, TrianguloTipo tipoTriangulo)
+        public bool Adicionar(int lado1, int lado2, int lado3)
         {
             Triangulo triangulo = new Triangulo();
 
             triangulo.Lado1 = lado1;
             triangulo.Lado2 = lado2;
             triangulo.Lado3 = lado3;
-            triangulo.Tipo = tipoTriangulo;
-            
+            triangulo.Tipo = ObterTipoTriangulo(lado1, lado2, lado3);
+
             if (triangulo.ValidarTriangulo() == true)
             {
                 triangulo.Codigo = codigoAtual;
@@ -31,7 +31,7 @@
             }
         }
 
-        public bool Editar(int codigo, int lado1, int lado2, int lado3, TrianguloTipo tipoTriangulo)
+        public bool Editar(int codigo, int lado1, int lado2, int lado3)
         {
             Triangulo trianguloParaAlterar = ObterPorCodigo(codigo);
 
@@ -43,12 +43,10 @@
             trianguloParaAlterar.Lado1 = lado1;
             trianguloParaAlterar.Lado2 = lado2;
             trianguloParaAlterar.Lado3 = lado3;
-            trianguloParaAlterar.Tipo = tipoTriangulo;
+            trianguloParaAlterar.Tipo = ObterTipoTriangulo(lado1, lado2, lado3);
 
             if (trianguloParaAlterar.ValidarTriangulo() == true)
             {
-                trianguloParaAlterar.Codigo = codigoAtual;
-
                 triangulos.Add(trianguloParaAlterar);
 
                 return true;
@@ -91,6 +89,24 @@
             }
 
             return null;
+        }
+
+        private TrianguloTipo ObterTipoTriangulo(int lado1, int lado2, int lado3)
+        {
+            Triangulo triangulo = new Triangulo();
+
+            if (triangulo.EhEquilatero(lado1, lado2, lado3) == true)
+            {
+                return TrianguloTipo.Equilatero;
+            }
+            else if (triangulo.EhIsosceles(lado1, lado2, lado3) == true)
+            {
+                return TrianguloTipo.Isosceles;
+            }
+            else
+            {
+                return TrianguloTipo.Escaleno;
+            }
         }
     }
 }

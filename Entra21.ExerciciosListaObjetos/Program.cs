@@ -1,4 +1,4 @@
 ﻿using Entra21.ExerciciosListaObjetos.Triangulo;
 
-TrianguloControlador triangulo = new TrianguloControlador();
+TrianguloController triangulo = new TrianguloController();
 triangulo.GerenciarMenu();

@@ -9,7 +9,7 @@
         public TrianguloTipo Tipo;
 
         public bool ValidarTriangulo()
-        {            
+        {
             if (ValidarLado1() == true && ValidarLado2() == true && ValidarLado3() == true)
             {
                 return true;
@@ -20,7 +20,7 @@
             }
         }
 
-        private bool ValidarLado1()
+        public bool ValidarLado1()
         {
             var modulo23 = Math.Abs(Lado2 - Lado3);
             var soma23 = Lado2 + Lado3;
@@ -35,7 +35,7 @@
             }
         }
 
-        private bool ValidarLado2()
+        public bool ValidarLado2()
         {
             var modulo13 = Math.Abs(Lado1 - Lado3);
             var soma13 = Lado1 + Lado3;
@@ -64,5 +64,25 @@
                 return false;
             }
         }
+
+        public bool EhEquilatero(int lado1, int lado2, int lado3)
+        {
+            if (lado1 == lado2 && lado1 == lado3)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        
+        public bool EhIsosceles(int lado1, int lado2, int lado3)
+        {
+            if ((lado1 == lado2 || lado1 == lado3 || lado2 == lado3) && EhEquilatero(lado1, lado2, lado3) == false)
+            {
+                return true;
+            }
+
+            return false;
+        }        
     }
 }
