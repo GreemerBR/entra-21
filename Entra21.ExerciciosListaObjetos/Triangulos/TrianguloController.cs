@@ -1,4 +1,4 @@
-﻿namespace Entra21.ExerciciosListaObjetos.Triangulo
+﻿namespace Entra21.ExerciciosListaObjetos.Triangulos
 {
     internal class TrianguloController
     {
