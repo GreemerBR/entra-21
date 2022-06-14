@@ -96,10 +96,10 @@ As seguintes ferramentas foram usadas durante as aulas:
   
 ## _Autor_
 
-<img src="https://avatars.githubusercontent.com/u/83144131?v=4" width="100px;" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/83144131?s=400&u=65107246987fc5df068bdc384127bc4d90ca8626&v=4" width="100px;" alt=""/>
 <p>Gregory Viegas Zimmer</p>
 
-Eng. Civil 👷🏻, Mestre em Eng. Ambiental 💧 e aspirante a desenvolvedor C# 👨🏻‍💻.
+Assistente de Engenharia de Software na Warren :rocket: e Aluno do curso de C# no Programa Entra21 :man_technologist:
 
 _Entre em contato!_
 
