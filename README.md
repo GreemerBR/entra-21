@@ -71,7 +71,7 @@ As seguintes ferramentas foram usadas durante as aulas:
 
 * As aulas de 19 e 20/05/2022 foram sobre o uso do VETORES.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosTryCatch);
-* Os exercícios da Lista 4 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosVetor);
+* Os exercícios da [Lista 4](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2004%20-%20Vetor.pdf) estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosVetor);
 * E os exercícios [complementares da Lista 4](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2004%20-%20Vetor%20complementar.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosVetoresComplementares). 
 
 ## _ORIENTAÇÃO A OBJETOS_
