@@ -65,9 +65,25 @@
             }
         }
 
-        public bool EhEquilatero(int lado1, int lado2, int lado3)
+        public TrianguloTipo ObterTipoTriangulo()
+        {           
+            if (EhEquilatero() == true)
+            {
+                return TrianguloTipo.Equilatero;
+            }
+            else if (EhIsosceles() == true)
+            {
+                return TrianguloTipo.Isosceles;
+            }
+            else
+            {
+                return TrianguloTipo.Escaleno;
+            }
+        }
+
+        private bool EhEquilatero()
         {
-            if (lado1 == lado2 && lado1 == lado3)
+            if (Lado1 == Lado2 && Lado1 == Lado3)
             {
                 return true;
             }
@@ -75,9 +91,9 @@
             return false;
         }
         
-        public bool EhIsosceles(int lado1, int lado2, int lado3)
+        private bool EhIsosceles()
         {
-            if ((lado1 == lado2 || lado1 == lado3 || lado2 == lado3) && EhEquilatero(lado1, lado2, lado3) == false)
+            if ((Lado1 == Lado2 || Lado1 == Lado3 || Lado2 == Lado3) && EhEquilatero() == false)
             {
                 return true;
             }
