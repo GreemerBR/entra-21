@@ -2,7 +2,7 @@
 
 int opcaoDesejada = 0;
 
-while (opcaoDesejada != 18)
+while (opcaoDesejada != 13)
 {
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine(@"-------------MENU-------------
