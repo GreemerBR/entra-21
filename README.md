@@ -36,63 +36,63 @@ As seguintes ferramentas foram usadas durante as aulas:
 ## _FUNDAMENTOS_
 
 * As aulas de 18 a 22/04/2022 foram sobre os Fundamentos de C#.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosFundamentosCSharp);
-* Os exercícios da Lista 1 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosSolicitacaoDeInformacao).
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosFundamentosCSharp);
+* Os exercícios da [Lista 1](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2001%20-%20Solicitacao%20de%20Informacao.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosSolicitacaoDeInformacao).
 
 ## _IF_
 
 * As aulas de 22 a 25/04/2022 foram sobre o uso do IF.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosIf).
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosIf).
   
 ## _MÉTODOS STRING_
 
 * As aulas de 27 a 29/04/2022 foram sobre o uso dos Métodos.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosMetodosString).
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosMetodosString).
 
 ## _WHILE_
 
 * As aulas de 02 a 11/05/2022 foram sobre o uso do WHILE.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosWhile).
-* Os exercícios da Lista 3 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosWhile).
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosWhile).
+* Os exercícios da [Lista 3](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2003%20-%20While.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosWhile).
 
 ## _FOR_
 
 * As aulas de 12/05/2022 foram sobre o uso do FOR.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosFor);
-* Os exercícios refeitos da Lista 3 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosForComTryCatch).
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosFor);
+* Os exercícios refeitos da [Lista 3](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2003%20-%20While.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosForComTryCatch).
 
 ## _TRY CATCH_
 
 * As aulas de 13 a 18/05/2022 foram sobre o uso do TRY CATCH.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosTryCatch);
-* Os exercícios refeitos da Lista 3 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosForComTryCatch).
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosTryCatch);
+* Os exercícios refeitos da [Lista 3](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2003%20-%20While.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosForComTryCatch).
 
 ## _VETORES_
 
 * As aulas de 19 e 20/05/2022 foram sobre o uso do VETORES.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosTryCatch);
-* Os exercícios da Lista 4 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosVetor);
-* E os exercícios complementares da Lista 4 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosVetoresComplementares). 
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosTryCatch);
+* Os exercícios da Lista 4 estão [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosVetor);
+* E os exercícios [complementares da Lista 4](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2004%20-%20Vetor%20complementar.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosVetoresComplementares). 
 
 ## _ORIENTAÇÃO A OBJETOS_
 
 * As aulas a partir de 23/05/2022 a 03/06/2022 foram sobre ORIENTAÇÃO A OBJETOS.
-* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosOrientacaoObjetos);
-* Os testes unitários dos exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosOrientacaoObjetos.Tests);
-* Os exercícios da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExercicioOrientacaoObjetos);
-* Os testes unitários da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExercicioOrientacaoObjetos.Tests).
+* Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosOrientacaoObjetos);
+* Os testes unitários dos exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosOrientacaoObjetos.Tests);
+* Os exercícios da [Lista 5](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2005%20-%20Orientação%20a%20objetos.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExercicioOrientacaoObjetos);
+* Os testes unitários da Lista 5 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExercicioOrientacaoObjetos.Tests).
 
 ## _LISTAS_
 
 * As aulas a partir de 06/06/2022 estão sendo sobre Listas (Tipos Primitivos e de Objetos).
-* O exemplo de lista com tipo primitivo está armazenado [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosLista);
-* Os exercícios da Lista 6 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosLista);
-* Os exemplos de lista de Objetos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExemplosListaObjetos);
-* Os exercícios da Lista 7 estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.ExerciciosListaObjetos).
+* O exemplo de lista com tipo primitivo está armazenado [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosLista);
+* Os exercícios da [Lista 6](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2006%20-%20Listas%20de%20tipos%20primitivos.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosLista);
+* Os exemplos de lista de Objetos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosListaObjetos);
+* Os exercícios da [Lista 7](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2007%20-%20Listas%20de%20objetos.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosListaObjetos).
 
 ## _ENCAPSULAMENTO_
 
-* No dia 09/06/2022 foi passado conteúdo e exemplo para entendimento da segurança dos objetos por meio do encapsulamento, e ele está [aqui](https://github.com/GreemerBR/entra-21/tree/master/Entra21.SegurancaDosObjetos).
+* No dia 09/06/2022 foi passado conteúdo e exemplo para entendimento da segurança dos objetos por meio do encapsulamento, e ele está [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.SegurancaDosObjetos).
   
 ## _Autor_
 
