@@ -20,7 +20,7 @@ namespace Entra21.ExerciciosListaObjetos.Alunos
 
                 if (codigo == 1)
                 {
-                    AdicionarNovoAluno();
+                    CadastrarNovoAluno();
                 }
 
                 if (codigo == 2)
@@ -35,48 +35,48 @@ namespace Entra21.ExerciciosListaObjetos.Alunos
 
                 if (codigo == 4)
                 {
-                    EditarNotasAlunos();
+                    AlterarNotasAlunos();
                 }
 
                 if (codigo == 5)
                 {
-                    ObterListaDeNomes();
+                    ListarNomes();
                 }
 
-                //if (codigo == 6)
-                //{
-                //    ObterMedias();
-                //}
+                if (codigo == 6)
+                {
+                    ListarMedias();
+                }
 
-                //if (codigo == 7)
-                //{
-                //    ObterAprovados();
-                //}
+                if (codigo == 7)
+                {
+                    ListarAprovados();
+                }
 
-                //if (codigo == 8)
-                //{
-                //    ObterReprovado();
-                //}
+                if (codigo == 8)
+                {
+                    ListarReprovados();
+                }
 
-                //if (codigo == 9)
-                //{
-                //    ObtereEmExame();
-                //}
+                if (codigo == 9)
+                {
+                    ListarEmExame();
+                }
 
-                //if (codigo == 10)
-                //{
-                //    ObterMediaPorCodigoMatricula();
-                //}
+                if (codigo == 10)
+                {
+                    ApresentarMediaDeAlunoPorCodigoMatricula();
+                }
 
-                //if (codigo == 11)
-                //{
-                //    ObterStatusPorCodigoMatricula();
-                //}
+                if (codigo == 11)
+                {
+                    ApresentarStatusDoAlunoPorCodigoMatricula();
+                }
 
-                //if (codigo == 12)
-                //{
-                //    ObterMediasPorIdade();
-                //}
+                if (codigo == 12)
+                {
+                    ApresentarMediaDaIdade();
+                }
 
                 if (codigo != 13)
                 {
@@ -86,7 +86,7 @@ Aperte alguma tecla para continuar.");
                 }
             }
         }
-        
+
         private int ApresentarMenu()
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -149,7 +149,7 @@ Por favor informe um número presente no MENU.
             return codigo;
         }
 
-        private void AdicionarNovoAluno()
+        private void CadastrarNovoAluno()
         {
             var nomeAlunoValido = new NomeAlunoValido();
             var idadeAlunoValida = new IdadeAlunoValida();
@@ -181,7 +181,7 @@ Por favor informe um número presente no MENU.
 
         private string ExcluirAluno()
         {
-            ObterListaDeNomes();
+            ListarNomes();
 
             var nomeAlunoValido = new NomeAlunoValido();
 
@@ -235,7 +235,7 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
             }
         }
 
-        private string EditarNotasAlunos()
+        private string AlterarNotasAlunos()
         {
             var codigoMatriculaValido = new CodigoMatriculaValido();
             var notaValida = new NotaValida();
@@ -270,7 +270,7 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
 
         }
 
-        private string ObterListaDeNomes()
+        private string ListarNomes()
         {
             var aluno = alunoServico.ObterNomes();
 
@@ -280,17 +280,131 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
             {
                 var alunoAtual = aluno[i];
 
-                listaAlunos = alunoAtual +
-                    "\n" + listaAlunos;
+                listaAlunos = $@"Nome: {alunoAtual}
+{listaAlunos}";
             }
 
-            return listaAlunos;
+            return $@"Alunos cadastrados
+{listaAlunos}";
+        }
+
+        private string ListarMedias()
+        {
+            var media = alunoServico.ObterMedias();
+            var aluno = alunoServico.ObterNomes();
+
+            var listaAlunosComMedias = "";
+
+            for (var i = 0; i < media.Count; i++)
+            {
+                var mediaAtual = media[i];
+                var alunoAtual = aluno[i];
+
+                listaAlunosComMedias = $@"Nome: {alunoAtual} - Média: {mediaAtual}
+{listaAlunosComMedias}";
+            }
+
+            return $@"Alunos cadastrados e suas médias
+{listaAlunosComMedias}";
+        }
+
+        private string ListarAprovados()
+        {
+            var aprovado = alunoServico.ObterAprovados();
+
+            var listaAprovados = "";
+
+            for (var i = 0; i < aprovado.Count; i++)
+            {
+                var aprovadoAtual = aprovado[i];
+
+                listaAprovados = $@"{aprovadoAtual}
+{listaAprovados}";
+            }
+
+            return $@"Alunos aprovados
+{listaAprovados}";
+        }
+
+        private string ListarReprovados()
+        {
+            var reprovado = alunoServico.ObterReprovados();
+
+            var listaReprovados = "";
+
+            for (var i = 0; i < reprovado.Count; i++)
+            {
+                var reprovadoAtual = reprovado[i];
+
+                listaReprovados = $@"{reprovadoAtual}
+{listaReprovados}";
+            }
+
+            return $@"Alunos reprovados
+{listaReprovados}";
+        }
+
+        private string ListarEmExame()
+        {
+            var emExame = alunoServico.ObterReprovados();
+
+            var listaEmExame = "";
+
+            for (var i = 0; i < emExame.Count; i++)
+            {
+                var emExameAtual = emExame[i];
+
+                listaEmExame = $@"{emExameAtual}
+{listaEmExame}";
+            }
+
+            return $@"Alunos em exame
+{listaEmExame}";
+        }
+
+        private string ApresentarMediaDeAlunoPorCodigoMatricula()
+        {
+            var codigoMatriculaValido = new CodigoMatriculaValido();
+
+            AlunosComNomeCodigo();
+
+            Console.Write("Por favor, informe o código de matrícula do(a) aluno(a) que deseja obter a média: ");
+            var codigoMatricula = codigoMatriculaValido.ObterCodigoMatriculaValido();
+
+            var media = alunoServico.ObterMediaPorCodigoMatricula(codigoMatricula);
+
+            var aluno = alunoServico.ObterAlunoPorCodigoMatricula(codigoMatricula);
+
+            return $"A média do(a) aluno(a) {aluno.Nome} é de: {media:F}";
+        }
+
+        private string ApresentarStatusDoAlunoPorCodigoMatricula()
+        {
+            var codigoMatriculaValido = new CodigoMatriculaValido();
+
+            AlunosComNomeCodigo();
+
+            Console.Write("Por favor, informe o código de matrícula do(a) aluno(a) que deseja obter o status: ");
+            var codigoMatricula = codigoMatriculaValido.ObterCodigoMatriculaValido();
+
+            var status = alunoServico.ObterStatusPorCodigoMatricula(codigoMatricula);
+
+            var aluno = alunoServico.ObterAlunoPorCodigoMatricula(codigoMatricula);
+
+            return $"O status do(a) aluno(a) {aluno.Nome} é: {status}";
+        }
+
+        private string ApresentarMediaDaIdade()
+        {
+            var mediaIdades = alunoServico.ObterMediaIdades();
+
+            return $"A média de idade dos alunos é de {mediaIdades:F} anos";
         }
 
         private void AlunosComNomeCodigo()
         {
             var alunos = alunoServico.ObterTodos();
-            
+
             for (var i = 0; i < alunos.Count; i++)
             {
                 var alunoAtual = alunos[i];

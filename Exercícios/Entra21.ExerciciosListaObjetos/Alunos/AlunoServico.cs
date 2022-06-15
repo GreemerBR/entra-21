@@ -113,7 +113,7 @@
             return AlunosAprovados;
         }
 
-        public List<string> ObterReprovado()
+        public List<string> ObterReprovados()
         {
             var AlunosReprovado = new List<string>();
 
@@ -163,6 +163,24 @@
             var status = aluno.ObterStatus();
 
             return status;
+        }
+
+        public double ObterMediaIdades()
+        {
+            var alunos = ObterTodos();
+
+            var somaIdade = 0;
+
+            for (var i = 0; i < alunos.Count; i++)
+            {
+                var idadeAlunoAtual = alunos[i].Idade;
+
+                somaIdade = idadeAlunoAtual + somaIdade;
+            }
+
+            double mediaIdade = somaIdade / alunos.Count;
+
+            return mediaIdade;
         }
 
         public List<Aluno> ObterTodos()
