@@ -91,7 +91,7 @@ Aperte alguma tecla para continuar.");
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
-----------------MENU----------------
+--------------------MENU--------------------
  1 - Adicionar aluno
  2 - Remover aluno
  3 - Editar dados cadastrais de um aluno
