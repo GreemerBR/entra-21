@@ -52,7 +52,7 @@
             return false;
         }
 
-        public bool EditarNotasAlunos(int codigoMatricula, int nota1, int nota2, int nota3)
+        public bool EditarNotasAlunos(int codigoMatricula, double nota1, double nota2, double nota3)
         {
             var alunoParaEditarNotas = ObterAlunoPorCodigoMatricula(codigoMatricula);
 
@@ -165,7 +165,12 @@
             return status;
         }
 
-        private Aluno ObterAlunoPorCodigoMatricula(int codigoMatricula)
+        public List<Aluno> ObterTodos()
+        {
+            return alunos;
+        }
+
+        public Aluno ObterAlunoPorCodigoMatricula(int codigoMatricula)
         {
             var aluno = codigoMatricula;
 
@@ -180,7 +185,7 @@
             }
 
             return null;
-        }
+        }       
 
         private Aluno ObterAlunoPorNome(string nome)
         {
