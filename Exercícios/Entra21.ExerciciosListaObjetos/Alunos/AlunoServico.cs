@@ -169,11 +169,11 @@
         {
             var alunos = ObterTodos();
 
-            var somaIdade = 0;
+            var somaIdade = 0.0;
 
             for (var i = 0; i < alunos.Count; i++)
             {
-                var idadeAlunoAtual = alunos[i].Idade;
+                var idadeAlunoAtual = Convert.ToDouble(alunos[i].Idade);
 
                 somaIdade = idadeAlunoAtual + somaIdade;
             }

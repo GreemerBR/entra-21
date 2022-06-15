@@ -100,7 +100,7 @@ Aperte alguma tecla para continuar.");
  6 - Obter as médias dos alunos
  7 - Obter a lista de alunos aprovados
  8 - Obter a lista de alunos reprovados
- 9 - Obter a lista de aprovados
+ 9 - Obter a lista de alunos em exame
 10 - Obter a média por código de matrícula
 11 - Obter o status por código de matrícula
 12 - Obter a média de idade dos alunos
@@ -158,50 +158,59 @@ Por favor informe um número presente no MENU.
 
             Console.Clear();
 
-            Console.Write("Por favor, informe o nome do(a) aluno(a) a ser cadastrado(a): ");
+            Console.Write(@"
+Por favor, informe o nome do(a) aluno(a) a ser cadastrado(a): ");
             var nome = nomeAlunoValido.ObterNome();
 
-            Console.Write("Por favor, informe a idade do(a) aluno(a) a ser cadastrado(a): ");
+            Console.Write(@"
+Por favor, informe a idade do(a) aluno(a) a ser cadastrado(a): ");
             var idade = idadeAlunoValida.ObterIdade();
 
-            Console.Write("Por favor, informe o nome da matéria favorita do(a) aluno(a) a ser cadastrado(a): ");
+            Console.Write(@"
+Por favor, informe o nome da matéria favorita do(a) aluno(a) a ser cadastrado(a): ");
             var materiaFavorita = materiaFavoritaValida.ObterMateriaFavorita();
 
-            Console.Write("Por favor, informe a nota 1 do(a) aluno(a) a ser cadastrado(a): ");
+            Console.Write(@"
+Por favor, informe a nota 1 do(a) aluno(a) a ser cadastrado(a): ");
             var nota1 = notaValida.ObterNota();
 
-            Console.Write("Por favor, informe a nota 2 do(a) aluno(a) a ser cadastrado(a): ");
+            Console.Write(@"
+Por favor, informe a nota 2 do(a) aluno(a) a ser cadastrado(a): ");
             var nota2 = notaValida.ObterNota();
 
-            Console.Write("Por favor, informe a nota 3 do(a) aluno(a) a ser cadastrado(a): ");
+            Console.Write(@"
+Por favor, informe a nota 3 do(a) aluno(a) a ser cadastrado(a): ");
             var nota3 = notaValida.ObterNota();
 
             alunoServico.AdicionarAluno(nome, idade, materiaFavorita, nota1, nota2, nota3);
         }
 
-        private string ExcluirAluno()
+        private void ExcluirAluno()
         {
             ListarNomes();
 
             var nomeAlunoValido = new NomeAlunoValido();
 
-            Console.Write("Por favor, informe o nome do(a) aluno(a) que você deseja apagar do cadastro: ");
+            Console.Write(@"
+Por favor, informe o nome do(a) aluno(a) que você deseja apagar do cadastro: ");
             var nome = nomeAlunoValido.ObterNome();
 
             var apagou = alunoServico.RemoverAluno(nome);
 
             if (apagou == true)
             {
-                return $"O cadastro do(a) aluno(a) {nome} foi apagado com sucesso.";
+                Console.WriteLine($@"
+O cadastro do(a) aluno(a) {nome} foi apagado com sucesso.");
             }
             else
             {
-                return $@"O cadastro do(a) aluno(a) {nome} não foi apagado, pois o mesmo não foi encontrado.
-Por favor, verifique se o nome informado é o correto e tente novamente.";
+                Console.WriteLine($@"
+O cadastro do(a) aluno(a) {nome} não foi apagado, pois o mesmo não foi encontrado.
+Por favor, verifique se o nome informado é o correto e tente novamente.");
             }
         }
 
-        private string AlterarDadosCadastrais()
+        private void AlterarDadosCadastrais()
         {
             var codigoMatriculaValido = new CodigoMatriculaValido();
             var nomeAlunoValido = new NomeAlunoValido();
@@ -210,48 +219,62 @@ Por favor, verifique se o nome informado é o correto e tente novamente.";
 
             AlunosComNomeCodigo();
 
-            Console.Write("Por favor, informe o código de matrícula do(a) aluno(a) que deseja alterar os dados cadastrais: ");
+            Console.Write(@"
+Por favor, informe o código de matrícula do(a) aluno(a) que deseja alterar os dados cadastrais: ");
             var codigoMatricula = codigoMatriculaValido.ObterCodigoMatriculaValido();
 
-            Console.Write("Por favor, informe o novo nome do(a) aluno(a): ");
+            Console.Clear();
+
+            Console.Write(@"
+Por favor, informe o novo nome do(a) aluno(a): ");
             var nome = nomeAlunoValido.ObterNome();
 
-            Console.Write("Por favor, informe a nova idade do(a) aluno(a): ");
+            Console.Write(@"
+Por favor, informe a nova idade do(a) aluno(a): ");
             var idade = idadeAlunoValida.ObterIdade();
 
-            Console.Write("Por favor, informe o nome da nova matéria favorita do(a) aluno(a): ");
+            Console.Write(@"
+Por favor, informe o nome da nova matéria favorita do(a) aluno(a): ");
             var materiaFavorita = materiaFavoritaValida.ObterMateriaFavorita();
 
             var editou = alunoServico.EditarDadosCadastrais(codigoMatricula, nome, idade, materiaFavorita);
 
             if (editou == true)
             {
-                return $"O cadastro do(a) aluno(a) {nome} foi editado com sucesso.";
+                Console.WriteLine($@"
+O cadastro do(a) aluno(a) {nome} foi editado com sucesso.");
             }
             else
             {
-                return $@"O cadastro do(a) aluno(a) {nome} não foi editado, pois o mesmo não foi encontrado.
-Por favor, verifique se o código de matrícula informado é o correto e tente novamente.";
+                Console.WriteLine($@"
+O cadastro do(a) aluno(a) {nome} não foi editado, pois o mesmo não foi encontrado.
+Por favor, verifique se o código de matrícula informado é o correto e tente novamente.");
             }
         }
 
-        private string AlterarNotasAlunos()
+        private void AlterarNotasAlunos()
         {
             var codigoMatriculaValido = new CodigoMatriculaValido();
             var notaValida = new NotaValida();
 
             AlunosComNomeCodigo();
 
-            Console.Write("Por favor, informe o código de matrícula do(a) aluno(a) que deseja alterar os dados cadastrais: ");
+            Console.Write(@"
+Por favor, informe o código de matrícula do(a) aluno(a) que deseja alterar os dados cadastrais: ");
             var codigoMatricula = codigoMatriculaValido.ObterCodigoMatriculaValido();
 
-            Console.Write("Por favor, informe a nota 1 do(a) aluno a ser cadastrado: ");
+            Console.Clear();
+
+            Console.Write(@"
+Por favor, informe a nota 1 do(a) aluno a ser cadastrado: ");
             var nota1 = notaValida.ObterNota();
 
-            Console.Write("Por favor, informe a nota 2 do(a) aluno a ser cadastrado: ");
+            Console.Write(@"
+Por favor, informe a nota 2 do(a) aluno a ser cadastrado: ");
             var nota2 = notaValida.ObterNota();
 
-            Console.Write("Por favor, informe a nota 3 do(a) aluno a ser cadastrado: ");
+            Console.Write(@"
+Por favor, informe a nota 3 do(a) aluno a ser cadastrado: ");
             var nota3 = notaValida.ObterNota();
 
             var editou = alunoServico.EditarNotasAlunos(codigoMatricula, nota1, nota2, nota3);
@@ -260,17 +283,19 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
 
             if (editou == true)
             {
-                return $"O cadastro do(a) aluno {alunoEditado.Nome} foi editado(a) com sucesso.";
+                Console.WriteLine($@"
+O cadastro do(a) aluno {alunoEditado.Nome} foi editado(a) com sucesso.");
             }
             else
             {
-                return $@"O cadastro do(a) aluno {alunoEditado.Nome} não foi editado, pois o mesmo não foi encontrado.
-Por favor, verifique se o código de matrícula informado é o correto e tente novamente.";
+                Console.WriteLine($@"
+O cadastro do(a) aluno {alunoEditado.Nome} não foi editado, pois o mesmo não foi encontrado.
+Por favor, verifique se o código de matrícula informado é o correto e tente novamente.");
             }
 
         }
 
-        private string ListarNomes()
+        private void ListarNomes()
         {
             var aluno = alunoServico.ObterNomes();
 
@@ -280,15 +305,15 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
             {
                 var alunoAtual = aluno[i];
 
-                listaAlunos = $@"Nome: {alunoAtual}
-{listaAlunos}";
+                listaAlunos = $@"{listaAlunos}
+Nome: {alunoAtual}";
             }
 
-            return $@"Alunos cadastrados
-{listaAlunos}";
+            Console.WriteLine($@"
+Alunos cadastrados{listaAlunos}");
         }
 
-        private string ListarMedias()
+        private void ListarMedias()
         {
             var media = alunoServico.ObterMedias();
             var aluno = alunoServico.ObterNomes();
@@ -300,15 +325,15 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
                 var mediaAtual = media[i];
                 var alunoAtual = aluno[i];
 
-                listaAlunosComMedias = $@"Nome: {alunoAtual} - Média: {mediaAtual}
-{listaAlunosComMedias}";
+                listaAlunosComMedias = $@"{listaAlunosComMedias}
+Nome: {alunoAtual} - Média: {mediaAtual:F}";
             }
 
-            return $@"Alunos cadastrados e suas médias
-{listaAlunosComMedias}";
+            Console.WriteLine($@"
+Alunos cadastrados e suas médias{listaAlunosComMedias}");
         }
 
-        private string ListarAprovados()
+        private void ListarAprovados()
         {
             var aprovado = alunoServico.ObterAprovados();
 
@@ -318,15 +343,15 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
             {
                 var aprovadoAtual = aprovado[i];
 
-                listaAprovados = $@"{aprovadoAtual}
-{listaAprovados}";
+                listaAprovados = $@"{listaAprovados}
+{aprovadoAtual}";
             }
 
-            return $@"Alunos aprovados
-{listaAprovados}";
+            Console.WriteLine($@"
+Alunos aprovados{listaAprovados}");
         }
 
-        private string ListarReprovados()
+        private void ListarReprovados()
         {
             var reprovado = alunoServico.ObterReprovados();
 
@@ -336,17 +361,17 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
             {
                 var reprovadoAtual = reprovado[i];
 
-                listaReprovados = $@"{reprovadoAtual}
-{listaReprovados}";
+                listaReprovados = $@"{listaReprovados}
+{reprovadoAtual}";
             }
 
-            return $@"Alunos reprovados
-{listaReprovados}";
+            Console.WriteLine($@"
+Alunos reprovados{listaReprovados}");
         }
 
-        private string ListarEmExame()
+        private void ListarEmExame()
         {
-            var emExame = alunoServico.ObterReprovados();
+            var emExame = alunoServico.ObtereEmExame();
 
             var listaEmExame = "";
 
@@ -354,62 +379,77 @@ Por favor, verifique se o código de matrícula informado é o correto e tente n
             {
                 var emExameAtual = emExame[i];
 
-                listaEmExame = $@"{emExameAtual}
-{listaEmExame}";
+                listaEmExame = $@"{listaEmExame}
+{emExameAtual}";
             }
 
-            return $@"Alunos em exame
-{listaEmExame}";
+            Console.WriteLine($@"
+Alunos em exame{listaEmExame}");
         }
 
-        private string ApresentarMediaDeAlunoPorCodigoMatricula()
+        private void ApresentarMediaDeAlunoPorCodigoMatricula()
         {
             var codigoMatriculaValido = new CodigoMatriculaValido();
 
             AlunosComNomeCodigo();
 
-            Console.Write("Por favor, informe o código de matrícula do(a) aluno(a) que deseja obter a média: ");
+            Console.Write(@"
+Por favor, informe o código de matrícula do(a) aluno(a) que deseja obter a média: ");
             var codigoMatricula = codigoMatriculaValido.ObterCodigoMatriculaValido();
 
             var media = alunoServico.ObterMediaPorCodigoMatricula(codigoMatricula);
 
             var aluno = alunoServico.ObterAlunoPorCodigoMatricula(codigoMatricula);
 
-            return $"A média do(a) aluno(a) {aluno.Nome} é de: {media:F}";
+            Console.Clear();
+
+            Console.WriteLine($@"
+A média do(a) aluno(a) {aluno.Nome} é de: {media:F}");
         }
 
-        private string ApresentarStatusDoAlunoPorCodigoMatricula()
+        private void ApresentarStatusDoAlunoPorCodigoMatricula()
         {
             var codigoMatriculaValido = new CodigoMatriculaValido();
 
             AlunosComNomeCodigo();
 
-            Console.Write("Por favor, informe o código de matrícula do(a) aluno(a) que deseja obter o status: ");
+            Console.Write(@"
+Por favor, informe o código de matrícula do(a) aluno(a) que deseja obter o status: ");
             var codigoMatricula = codigoMatriculaValido.ObterCodigoMatriculaValido();
 
             var status = alunoServico.ObterStatusPorCodigoMatricula(codigoMatricula);
 
             var aluno = alunoServico.ObterAlunoPorCodigoMatricula(codigoMatricula);
 
-            return $"O status do(a) aluno(a) {aluno.Nome} é: {status}";
+            Console.Clear();
+
+            Console.WriteLine($@"
+O status do(a) aluno(a) {aluno.Nome} é: {status}");
         }
 
-        private string ApresentarMediaDaIdade()
+        private void ApresentarMediaDaIdade()
         {
             var mediaIdades = alunoServico.ObterMediaIdades();
 
-            return $"A média de idade dos alunos é de {mediaIdades:F} anos";
+            Console.WriteLine($@"
+A média de idade dos alunos é de {mediaIdades:F} anos");
         }
 
         private void AlunosComNomeCodigo()
         {
             var alunos = alunoServico.ObterTodos();
 
+            var listaNomesComCodigos = "";
+
             for (var i = 0; i < alunos.Count; i++)
             {
                 var alunoAtual = alunos[i];
-                Console.WriteLine($"Nome: {alunoAtual.Nome} - Código de matrícula: {alunoAtual.CodigoMatricula}");
+            listaNomesComCodigos = $@"{listaNomesComCodigos}
+Nome: {alunoAtual.Nome} - Código de matrícula: {alunoAtual.CodigoMatricula}";
             }
+
+            Console.WriteLine($@"
+Lista de alunos(as) com códigos de matrícula{listaNomesComCodigos}");
         }
     }
 }
