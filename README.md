@@ -76,7 +76,7 @@ As seguintes ferramentas foram usadas durante as aulas:
 
 ## _ORIENTAÇÃO A OBJETOS_
 
-* As aulas a partir de 23/05/2022 a 03/06/2022 foram sobre ORIENTAÇÃO A OBJETOS.
+* As aulas de 23/05/2022 a 03/06/2022 foram sobre ORIENTAÇÃO A OBJETOS.
 * Os exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosOrientacaoObjetos);
 * Os testes unitários dos exemplos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosOrientacaoObjetos.Tests);
 * Os exercícios da [Lista 5](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2005%20-%20Orientação%20a%20objetos.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExercicioOrientacaoObjetos);
@@ -84,7 +84,7 @@ As seguintes ferramentas foram usadas durante as aulas:
 
 ## _LISTAS_
 
-* As aulas a partir de 06/06/2022 estão sendo sobre Listas (Tipos Primitivos e de Objetos).
+* As aulas de 06/06/2022 a 13/06/2022 foram sobre LISTAS (Tipos Primitivos e de Objetos).
 * O exemplo de lista com tipo primitivo está armazenado [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosLista);
 * Os exercícios da [Lista 6](https://github.com/GreemerBR/entra-21/blob/master/Listas/Lista%2006%20-%20Listas%20de%20tipos%20primitivos.pdf) estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exercícios/Entra21.ExerciciosLista);
 * Os exemplos de lista de Objetos estão armazenados [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosListaObjetos);
@@ -93,6 +93,11 @@ As seguintes ferramentas foram usadas durante as aulas:
 ## _ENCAPSULAMENTO_
 
 * No dia 09/06/2022 foi passado conteúdo e exemplo para entendimento da segurança dos objetos por meio do encapsulamento, e ele está [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.SegurancaDosObjetos).
+
+## _WINDOWS FORMS_
+
+* As aulas desde o dia 15/06/2022 estão sendo sobre WINDOWS FORMS.
+* O exemplo está armazenado [aqui](https://github.com/GreemerBR/entra-21/tree/master/Exemplos/Entra21.ExemplosWindowsForms).
   
 ## _Autor_
 
