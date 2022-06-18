@@ -31,13 +31,22 @@
                 codigo++, nome, altura, peso, imc.ToString("F")
             });
 
+                textBoxNome.Text = "";
+                textBoxAltura.Text = "";
+                textBoxPeso.Text = "";
+
                 return;
             }      
             
             dataGridView1.Rows[indiceLinhaSelecionada].Cells[1].Value = nome;
             dataGridView1.Rows[indiceLinhaSelecionada].Cells[2].Value = altura.ToString();
             dataGridView1.Rows[indiceLinhaSelecionada].Cells[3].Value = peso.ToString();
-            dataGridView1.Rows[indiceLinhaSelecionada].Cells[4].Value = imc.ToString();
+            dataGridView1.Rows[indiceLinhaSelecionada].Cells[4].Value = imc.ToString("F");
+
+            indiceLinhaSelecionada = -1;
+            textBoxNome.Text = "";
+            textBoxAltura.Text = "";
+            textBoxPeso.Text = "";
         }
 
         private void buttonApagar_Click(object sender, EventArgs e)
@@ -76,9 +85,9 @@
 
             // Obter a informação da linha selecionada passado a coluna desejada
             codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
-            var nome = linhaSelecionada.Cells[0].Value.ToString();
-            var altura = Convert.ToDouble(linhaSelecionada.Cells[0].Value);
-            var peso = Convert.ToDouble(linhaSelecionada.Cells[0].Value);
+            var nome = linhaSelecionada.Cells[1].Value.ToString();
+            var altura = Convert.ToDouble(linhaSelecionada.Cells[2].Value);
+            var peso = Convert.ToDouble(linhaSelecionada.Cells[3].Value);
 
             textBoxNome.Text = nome;
             textBoxAltura.Text = altura.ToString();
