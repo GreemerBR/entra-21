@@ -1,6 +1,6 @@
 ﻿namespace Entra21.ExerciciosListaObjetos.Triangulos
 {
-    internal enum TrianguloTipo
+    public enum TrianguloTipo
     {    
         Equilatero,
         Escaleno,

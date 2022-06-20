@@ -50,5 +50,6 @@ Tipo: {trianguloAtual.Tipo}
             }
 
             MessageBox.Show("Lista de triângulos:");
+        }
     }
 }
