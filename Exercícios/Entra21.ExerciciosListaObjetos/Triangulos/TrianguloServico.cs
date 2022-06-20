@@ -1,6 +1,6 @@
 ﻿namespace Entra21.ExerciciosListaObjetos.Triangulos
 {
-    internal class TrianguloServico
+    public class TrianguloServico
     {
         private List<Triangulo> triangulos = new List<Triangulo>();
 

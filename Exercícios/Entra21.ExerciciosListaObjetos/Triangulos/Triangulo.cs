@@ -1,6 +1,6 @@
 ﻿namespace Entra21.ExerciciosListaObjetos.Triangulos
 {
-    internal class Triangulo
+    public class Triangulo
     {
         public int Lado1;
         public int Lado2;
