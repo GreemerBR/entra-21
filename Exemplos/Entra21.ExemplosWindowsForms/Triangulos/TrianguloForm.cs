@@ -49,7 +49,7 @@ Tipo: {trianguloAtual.Tipo}
 ";
             }
 
-            MessageBox.Show("Lista de triângulos:");
+            MessageBox.Show(texto, "Lista de triângulos", MessageBoxButtons.OK);
         }
     }
 }

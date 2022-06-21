@@ -60,10 +60,10 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
-            // Pegar o indice da linha selecionada
-            var indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+            // Obter a quantidade de linhas que o usuário selecionou no DataGridView
+            var quantidadeLinhasSelecionadas = dataGridView1.SelectedRows.Count;
 
-            if (indiceLinhaSelecionada == -1)
+            if (quantidadeLinhasSelecionadas == 0)
             {
                 MessageBox.Show("Selecione um paciente.");
                 return;
@@ -74,6 +74,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             // Verifica se o usuário escolheu realmente apagar o registro
             if (opcaoEscolhida == DialogResult.Yes)
             {
+                var indiceLinhaSelecionada = dataGridView1.Rows[0].Index;
+
                 // Remove a linha utilizando o índice do DataGridView
                 dataGridView1.Rows.RemoveAt(indiceLinhaSelecionada);
 
@@ -160,6 +162,10 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void LerArquivoApresentandoPacientes()
         {
+            // Validar se o arquivo existe, consequantemente não é necessário percorrer uma lista que não existe
+            if (File.Exists("pacientes.json") == false)
+                return;
+
             // Ler arquivo JSON e armazenar os pacientes na lista de pacientes
             var conteudoArquivo = File.ReadAllText("pacientes.json");
             pacientes = JsonConvert.DeserializeObject<List<Paciente>>(conteudoArquivo);
@@ -191,6 +197,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             // Validar se conseguiu encontrar algum código, caso contrário não deve atualizar o código do novo paciente
             if (maiorCodigo != int.MinValue)
                 codigo = maiorCodigo;
+
+            dataGridView1.ClearSelection();
         }
 
         private double CalcularImc(double peso, double altura)
