@@ -49,132 +49,20 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                 return;
             }
 
-            // Construir o objeto de endereço com as variáveis
-            var endereco = new Endereco();
-            endereco.Cep = cep;
-            endereco.EnderecoCompleto = enderecoCompleto;
-            endereco.Paciente = pacienteServico.ObterPorNomePaciente(nomePaciente);
-
-            // Salvar este endereço na lista de endereços e no arquivo JSON
-            enderecoServico.Adicionar(endereco);
+            // Verificar se não está em modo edição, ou seja, está em modo de cadastro
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                CadastrarEndereco(cep, enderecoCompleto, nomePaciente);
+            }
+            else
+            {
+                EditarEndereco(cep, enderecoCompleto, nomePaciente);
+            }
 
             // Apresentar o registro novo no DataGridView
             PreencherDataGridViewComEnderecos();
 
             LimparCampos();
-        }
-
-        private void PreencherDataGridViewComEnderecos()
-        {
-            // Obter todos os enderços da lista de endereços
-            var enderecos = enderecoServico.ObterTodos();
-
-            // Remover todas as linhas do dataGridView
-            dataGridView1.Rows.Clear();
-
-            // Remover a selação do dataGridView
-            dataGridView1.ClearSelection();
-
-            // Percorrer cada um dos endereços adicionando cada um em uma nova
-            // linha da tabela
-            for (var i = 0; i < enderecos.Count; i++)
-            {
-                // Obter endereço percorrido
-                var endereco = enderecos[i];
-
-                // Cria uma nova linha no DataGridView com os dados referentes ao endereço
-                dataGridView1.Rows.Add(new object[]
-                {
-                    endereco.Codigo,
-                    endereco.EnderecoCompleto,
-                    endereco.Cep,
-                    endereco.Paciente.Nome
-                }); ;
-            }
-        }
-
-        private void PreencherComboBoxComOsNomesDosPacientes()
-        {
-            // Obter lista dos pacientes que foram cadastrados, ou seja, armazenados no JSON
-            var pacientes = pacienteServico.ObterTodos();
-
-            for (var i = 0; i < pacientes.Count; i++)
-            {
-                var paciente = pacientes[i];
-                comboBoxPaciente.Items.Add(paciente.Nome);
-            }
-        }
-
-        private void ObterDadosCep()
-        {
-            var cep = maskedTextBoxCep.Text.Replace("-", "").Trim();
-
-            if (cep.Length != 8)
-            {
-                return;
-            }
-
-            // HttpClient permite fazer requisições para obter ou enviar dados para outros sistemas
-            var httpClient = new HttpClient();
-
-            // Executando a requisição para o site ViaCep para obter os dados do endereço do cep
-            var resultado = httpClient.GetAsync($"http://viacep.com.br/ws/{cep}/json/").Result;
-
-            // Verificar se a requisicação deu certo
-            if (resultado.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                // Obter a resposta da requisição
-                var resposta = resultado.Content.ReadAsStringAsync().Result;
-
-                var dadosEndereco = JsonConvert.DeserializeObject<EnderecoDadosRequisicao>(resposta);
-
-                textBoxEnderecoCompleto.Text = $"{dadosEndereco.Logradouro} - {dadosEndereco.Bairro} - {dadosEndereco.Localidade} - {dadosEndereco.Uf}";
-            }
-        }
-
-        // Será executado este método quando o usuário said do campo de cep
-        private void maskedTextBoxCep_Leave(object sender, EventArgs e)
-        {
-            ObterDadosCep();
-        }
-
-        private bool ValidarDados(string cep, string enderecoCompleto, string nomePaciente)
-        {
-            if (cep.Replace("-", "").Trim().Length != 8)
-            {
-                MessageBox.Show("CEP inválido", "Aviso", MessageBoxButtons.OK);
-
-                maskedTextBoxCep.Focus();
-
-                return false;
-            }
-
-            if (enderecoCompleto.Trim().Length < 10)
-            {
-                MessageBox.Show("Endereço completo deve conter no mínimo 10 caracteres", "Aviso", MessageBoxButtons.OK);
-
-                textBoxEnderecoCompleto.Focus();
-
-                return false;
-            }
-
-            if (comboBoxPaciente.SelectedIndex == -1)
-            {
-                MessageBox.Show("Escolha um paciente", "Aviso", MessageBoxButtons.OK);
-
-                comboBoxPaciente.DroppedDown = true;
-
-                return false;
-            }
-
-            return true;
-        }
-
-        private void LimparCampos()
-        {
-            maskedTextBoxCep.Text = string.Empty;
-            textBoxEnderecoCompleto.Text = string.Empty;
-            comboBoxPaciente.SelectedIndex = -1;
         }
 
         private void buttonApagar_Click(object sender, EventArgs e)
@@ -220,6 +108,175 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
             // Remover a seleção do DataGridView
             dataGridView1.ClearSelection();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um endereço para editar", "Aviso", MessageBoxButtons.OK);
+
+                return;
+            }
+
+            // Obter a linha que o usuário selecionou
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            // Obter o código do endereço que o usuário selecionou
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            // Obter o endereço escolhido
+            var endereco = enderecoServico.ObterPorCodigo(codigo);
+
+            // Apresentar os dados do endereço na tela para editar
+            maskedTextBoxCep.Text = endereco.Cep;
+            textBoxEnderecoCompleto.Text = endereco.EnderecoCompleto;
+            comboBoxPaciente.SelectedItem = endereco.Paciente.Nome;
+        }
+
+        // Será executado este método quando o usuário said do campo de cep
+        private void maskedTextBoxCep_Leave(object sender, EventArgs e)
+        {
+            ObterDadosCep();
+        }
+
+        private void PreencherDataGridViewComEnderecos()
+        {
+            // Obter todos os enderços da lista de endereços
+            var enderecos = enderecoServico.ObterTodos();
+
+            // Remover todas as linhas do dataGridView
+            dataGridView1.Rows.Clear();
+
+            // Remover a selação do dataGridView
+            dataGridView1.ClearSelection();
+
+            // Percorrer cada um dos endereços adicionando cada um em uma nova
+            // linha da tabela
+            for (var i = 0; i < enderecos.Count; i++)
+            {
+                // Obter endereço percorrido
+                var endereco = enderecos[i];
+
+                // Cria uma nova linha no DataGridView com os dados referentes ao endereço
+                dataGridView1.Rows.Add(new object[]
+                {
+                    endereco.Codigo,
+                    endereco.EnderecoCompleto,
+                    endereco.Cep,
+                    endereco.Paciente.Nome
+                }); ;
+            }
+        }
+
+        private void PreencherComboBoxComOsNomesDosPacientes()
+        {
+            // Obter lista dos pacientes que foram cadastrados, ou seja, armazenados no JSON
+            var pacientes = pacienteServico.ObterTodos();
+
+            for (var i = 0; i < pacientes.Count; i++)
+            {
+                var paciente = pacientes[i];
+                comboBoxPaciente.Items.Add(paciente.Nome);
+            }
+        }
+
+        private void LimparCampos()
+        {
+            maskedTextBoxCep.Text = string.Empty;
+            textBoxEnderecoCompleto.Text = string.Empty;
+            comboBoxPaciente.SelectedIndex = -1;
+        }
+
+        private void ObterDadosCep()
+        {
+            var cep = maskedTextBoxCep.Text.Replace("-", "").Trim();
+
+            if (cep.Length != 8)
+            {
+                return;
+            }
+
+            // HttpClient permite fazer requisições para obter ou enviar dados para outros sistemas
+            var httpClient = new HttpClient();
+
+            // Executando a requisição para o site ViaCep para obter os dados do endereço do cep
+            var resultado = httpClient.GetAsync($"http://viacep.com.br/ws/{cep}/json/").Result;
+
+            // Verificar se a requisicação deu certo
+            if (resultado.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                // Obter a resposta da requisição
+                var resposta = resultado.Content.ReadAsStringAsync().Result;
+
+                var dadosEndereco = JsonConvert.DeserializeObject<EnderecoDadosRequisicao>(resposta);
+
+                textBoxEnderecoCompleto.Text = $"{dadosEndereco.Logradouro} - {dadosEndereco.Bairro} - {dadosEndereco.Localidade} - {dadosEndereco.Uf}";
+            }
+        }       
+
+        private bool ValidarDados(string cep, string enderecoCompleto, string nomePaciente)
+        {
+            if (cep.Replace("-", "").Trim().Length != 8)
+            {
+                MessageBox.Show("CEP inválido", "Aviso", MessageBoxButtons.OK);
+
+                maskedTextBoxCep.Focus();
+
+                return false;
+            }
+
+            if (enderecoCompleto.Trim().Length < 10)
+            {
+                MessageBox.Show("Endereço completo deve conter no mínimo 10 caracteres", "Aviso", MessageBoxButtons.OK);
+
+                textBoxEnderecoCompleto.Focus();
+
+                return false;
+            }
+
+            if (comboBoxPaciente.SelectedIndex == -1)
+            {
+                MessageBox.Show("Escolha um paciente", "Aviso", MessageBoxButtons.OK);
+
+                comboBoxPaciente.DroppedDown = true;
+
+                return false;
+            }
+
+            return true;
+        }       
+
+        private void CadastrarEndereco(string cep, string enderecoCompleto, string nomePaciente)
+        {
+            // Construir o objeto de endereço com as variáveis
+            var endereco = new Endereco();
+            endereco.Codigo = enderecoServico.ObterUltimoCodigo() + 1;
+            endereco.Cep = cep;
+            endereco.EnderecoCompleto = enderecoCompleto;
+            endereco.Paciente = pacienteServico.ObterPorNomePaciente(nomePaciente);
+
+            // Salvar este endereço na lista de endereços e no arquivo JSON
+            enderecoServico.Adicionar(endereco);
+        }
+
+        private void EditarEndereco(string cep, string enderecoCompleto, string nomePaciente)
+        {
+            // Obter linha selecionada
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            // Obter código que está na coluna oculta do DataGridView
+            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            // Construir o objeto com os dados da tela
+            var endereco = new Endereco();
+            endereco.Codigo = codigoSelecionado;
+            endereco.Cep = cep;
+            endereco.EnderecoCompleto = enderecoCompleto;
+            endereco.Paciente = pacienteServico.ObterPorNomePaciente(nomePaciente);
+
+            // Atualizar os dados na lista de endereços e salvar o dado atualizado no arquivo JSON
+            enderecoServico.Editar(endereco);
         }
     }
 }

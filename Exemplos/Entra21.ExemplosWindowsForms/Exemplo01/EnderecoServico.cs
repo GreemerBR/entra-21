@@ -91,6 +91,20 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             return null;
         }
 
+        public int ObterUltimoCodigo()
+        {
+            int ultimoCodigo = 0;
+
+            for (var i = 0; i < enderecos.Count; i++)
+            {
+                var endereco = enderecos[i];
+
+                ultimoCodigo = endereco.Codigo;
+            }
+
+            return ultimoCodigo;
+        }
+
         public void SalvarArquivo()
         {
             var enderecosEmJson = JsonConvert.SerializeObject(enderecos);
