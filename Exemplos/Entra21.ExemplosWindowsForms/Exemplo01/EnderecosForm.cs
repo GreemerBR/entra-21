@@ -28,9 +28,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            maskedTextBoxCep.Text = string.Empty;
-            textBoxEnderecoCompleto.Text = string.Empty;
-            comboBoxPaciente.SelectedIndex = -1;
+            LimparCampos();
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -39,6 +37,17 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             var cep = maskedTextBoxCep.Text;
             var enderecoCompleto = textBoxEnderecoCompleto.Text;
             var nomePaciente = Convert.ToString(comboBoxPaciente.SelectedItem);
+
+            // Executa o método ValidarDados que retornará um bool
+            // Sendo true quando os dados forem válidos
+            // False quando os dados forem inválidos
+            var dadosValidos = ValidarDados(cep, enderecoCompleto, nomePaciente);
+
+            // Verifica se os dados são inválidos para não dar continuidade no cadastro do endereço
+            if (dadosValidos == false)
+            {
+                return;
+            }
 
             // Construir o objeto de endereço com as variáveis
             var endereco = new Endereco();
@@ -51,6 +60,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
             // Apresentar o registro novo no DataGridView
             PreencherDataGridViewComEnderecos();
+
+            LimparCampos();
         }
 
         private void PreencherDataGridViewComEnderecos()
@@ -96,7 +107,13 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void ObterDadosCep()
         {
-            var cep = maskedTextBoxCep.Text.Replace("-","");
+            var cep = maskedTextBoxCep.Text.Replace("-", "").Trim();
+
+            if (cep.Length != 8)
+            {
+                return;
+            }
+
             // HttpClient permite fazer requisições para obter ou enviar dados para outros sistemas
             var httpClient = new HttpClient();
 
@@ -115,9 +132,94 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             }
         }
 
+        // Será executado este método quando o usuário said do campo de cep
         private void maskedTextBoxCep_Leave(object sender, EventArgs e)
         {
             ObterDadosCep();
+        }
+
+        private bool ValidarDados(string cep, string enderecoCompleto, string nomePaciente)
+        {
+            if (cep.Replace("-", "").Trim().Length != 8)
+            {
+                MessageBox.Show("CEP inválido", "Aviso", MessageBoxButtons.OK);
+
+                maskedTextBoxCep.Focus();
+
+                return false;
+            }
+
+            if (enderecoCompleto.Trim().Length < 10)
+            {
+                MessageBox.Show("Endereço completo deve conter no mínimo 10 caracteres", "Aviso", MessageBoxButtons.OK);
+
+                textBoxEnderecoCompleto.Focus();
+
+                return false;
+            }
+
+            if (comboBoxPaciente.SelectedIndex == -1)
+            {
+                MessageBox.Show("Escolha um paciente", "Aviso", MessageBoxButtons.OK);
+
+                comboBoxPaciente.DroppedDown = true;
+
+                return false;
+            }
+
+            return true;
+        }
+
+        private void LimparCampos()
+        {
+            maskedTextBoxCep.Text = string.Empty;
+            textBoxEnderecoCompleto.Text = string.Empty;
+            comboBoxPaciente.SelectedIndex = -1;
+        }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+            // Verificar se algum item do DataGridView está selecionado
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um endereço para remover", "Aviso", MessageBoxButtons.OK);
+
+                return;
+            }
+
+            // Questionar se o usuário realmente deseja apagar
+            var resposta = MessageBox.Show("Deseja realmente apagar o endereço?", "Aviso", MessageBoxButtons.YesNo);
+
+            // Validar que o usuário não escolheu SIM, porque não deverá continuar executando o código abaixo
+            if (resposta != DialogResult.Yes)
+            {
+                MessageBox.Show("Relaxa, teu registro está ali salvo!", "Aviso", MessageBoxButtons.OK);
+
+                return;
+            }
+
+            // Qual item será apagado
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            // Obter o código da linha selecionada na primeira coluna, que não está sendo apresentada para o usuário
+            // que é referente ao código do endereço
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            // Apagar o item da lista de itens no serviço
+
+            // Atualizar o arquivo JSON
+
+            // Buscar o endereço da linha de endereços filtrados por código
+            var endereco = enderecoServico.ObterPorCodigo(codigo);
+
+            //  Apagar o endenreço encontrado da lista de endereços e atualizar o arquivo JSON
+            enderecoServico.Apagar(endereco);
+
+            // Atualizar o DataGridView
+            PreencherDataGridViewComEnderecos();
+
+            // Remover a seleção do DataGridView
+            dataGridView1.ClearSelection();
         }
     }
 }
