@@ -93,7 +93,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         public int ObterUltimoCodigo()
         {
-            int ultimoCodigo = 0;
+            var ultimoCodigo = 0;
 
             for (var i = 0; i < enderecos.Count; i++)
             {
