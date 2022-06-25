@@ -112,32 +112,24 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Selecione um endereço para editar", "Aviso", MessageBoxButtons.OK);
-
-                return;
-            }
-
-            // Obter a linha que o usuário selecionou
-            var linhaSelecionada = dataGridView1.SelectedRows[0];
-
-            // Obter o código do endereço que o usuário selecionou
-            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
-
-            // Obter o endereço escolhido
-            var endereco = enderecoServico.ObterPorCodigo(codigo);
-
-            // Apresentar os dados do endereço na tela para editar
-            maskedTextBoxCep.Text = endereco.Cep;
-            textBoxEnderecoCompleto.Text = endereco.EnderecoCompleto;
-            comboBoxPaciente.SelectedItem = endereco.Paciente.Nome;
-        }
+            ApresentarDadosParaEdicao();
+        }       
 
         // Será executado este método quando o usuário said do campo de cep
         private void maskedTextBoxCep_Leave(object sender, EventArgs e)
         {
             ObterDadosCep();
+        }
+
+        // Quando o formulário é carregado apresenta os dados no DataGridView
+        private void EnderecosForm_Load(object sender, EventArgs e)
+        {
+            PreencherDataGridViewComEnderecos();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ApresentarDadosParaEdicao();
         }
 
         private void PreencherDataGridViewComEnderecos()
@@ -146,10 +138,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             var enderecos = enderecoServico.ObterTodos();
 
             // Remover todas as linhas do dataGridView
-            dataGridView1.Rows.Clear();
-
-            // Remover a selação do dataGridView
-            dataGridView1.ClearSelection();
+            dataGridView1.Rows.Clear();            
 
             // Percorrer cada um dos endereços adicionando cada um em uma nova
             // linha da tabela
@@ -167,6 +156,9 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                     endereco.Paciente.Nome
                 }); ;
             }
+
+            // Remover a selação do dataGridView
+            dataGridView1.ClearSelection();
         }
 
         private void PreencherComboBoxComOsNomesDosPacientes()
@@ -186,6 +178,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             maskedTextBoxCep.Text = string.Empty;
             textBoxEnderecoCompleto.Text = string.Empty;
             comboBoxPaciente.SelectedIndex = -1;
+            dataGridView1.ClearSelection();
         }
 
         private void ObterDadosCep()
@@ -213,7 +206,31 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
                 textBoxEnderecoCompleto.Text = $"{dadosEndereco.Logradouro} - {dadosEndereco.Bairro} - {dadosEndereco.Localidade} - {dadosEndereco.Uf}";
             }
-        }       
+        }
+
+        private void ApresentarDadosParaEdicao()
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um endereço para editar", "Aviso", MessageBoxButtons.OK);
+
+                return;
+            }
+
+            // Obter a linha que o usuário selecionou
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            // Obter o código do endereço que o usuário selecionou
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            // Obter o endereço escolhido
+            var endereco = enderecoServico.ObterPorCodigo(codigo);
+
+            // Apresentar os dados do endereço na tela para editar
+            maskedTextBoxCep.Text = endereco.Cep;
+            textBoxEnderecoCompleto.Text = endereco.EnderecoCompleto;
+            comboBoxPaciente.SelectedItem = endereco.Paciente.Nome;
+        }
 
         private bool ValidarDados(string cep, string enderecoCompleto, string nomePaciente)
         {
@@ -277,6 +294,6 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
             // Atualizar os dados na lista de endereços e salvar o dado atualizado no arquivo JSON
             enderecoServico.Editar(endereco);
-        }
+        }        
     }
 }
