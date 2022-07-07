@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Listas", "Listas", "{561A32
 		..\..\..\..\Área de Trabalho\Lista 05 - Orientação a objetos.pdf = ..\..\..\..\Área de Trabalho\Lista 05 - Orientação a objetos.pdf
 		..\..\..\..\Área de Trabalho\Lista 06 - Listas de tipos primitivos.pdf = ..\..\..\..\Área de Trabalho\Lista 06 - Listas de tipos primitivos.pdf
 		..\..\..\..\Área de Trabalho\Lista 07 - Listas de objetos.pdf = ..\..\..\..\Área de Trabalho\Lista 07 - Listas de objetos.pdf
+		..\..\..\..\Downloads\Lista 08 - SQL Insert.pdf = ..\..\..\..\Downloads\Lista 08 - SQL Insert.pdf
 		..\..\..\..\Área de Trabalho\Lista IF Complementar.pdf = ..\..\..\..\Área de Trabalho\Lista IF Complementar.pdf
 	EndProjectSection
 EndProject
@@ -61,6 +62,13 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Exercícios\Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{2C7D33C3-44B1-4240-9BF1-D50F3DD4BF58}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWindowsForms", "Exemplos\Entra21.ExemplosWindowsForms\Entra21.ExemplosWindowsForms.csproj", "{A7B326D2-F40C-4FCA-8B79-189B0F968498}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{2C20215E-46E1-48B8-877C-7410AFD92634}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql = ..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{865ECDEB-9A50-4160-875E-2BEAEA8DD41A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -264,6 +272,8 @@ Global
 		{738B46A3-763A-434F-B07F-79D330D19CD7} = {B3CEF985-BCF8-4ACF-A4FC-FCECC86D8CDC}
 		{2C7D33C3-44B1-4240-9BF1-D50F3DD4BF58} = {B3CEF985-BCF8-4ACF-A4FC-FCECC86D8CDC}
 		{A7B326D2-F40C-4FCA-8B79-189B0F968498} = {0A293111-2FB5-4825-8AE9-644BF0C6C85E}
+		{2C20215E-46E1-48B8-877C-7410AFD92634} = {0A293111-2FB5-4825-8AE9-644BF0C6C85E}
+		{865ECDEB-9A50-4160-875E-2BEAEA8DD41A} = {B3CEF985-BCF8-4ACF-A4FC-FCECC86D8CDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A821C32-07AE-4EB9-952D-6B04787EC2E8}
