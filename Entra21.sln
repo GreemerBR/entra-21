@@ -69,6 +69,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{2C20215E-46E
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{865ECDEB-9A50-4160-875E-2BEAEA8DD41A}"
+	ProjectSection(SolutionItems) = preProject
+		Exercícios\SQL\Lista08.sql = Exercícios\SQL\Lista08.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
