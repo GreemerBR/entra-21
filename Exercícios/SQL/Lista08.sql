@@ -1,6 +1,6 @@
 ﻿-- Exercício 01
 CREATE TABLE pessoas(
-	id PRIMARY KEY IDENTITY (1,1),
+	id INTEGER PRIMARY KEY IDENTITY (1,1),
 	nome VARCHAR(100),
 	cpf VARCHAR(14),
 	rg VARCHAR(12),
@@ -230,5 +230,118 @@ INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero) VALUES(
 
 SELECT id, estado, cidade, bairro, cep, logradouro, numero, complemento FROM enderecos;
 
+UPDATE enderecos SET logradouro = 'Rua Julio Teodoro Martins', completemento = 'Casa' WHERE id = 2;
+
+UPDATE enderecos SET cidade = 'Salvador', completemento = 'Casa' WHERE id = 4;
+
+UPDATE enderecos SET cep = '35.162-484', completemento = 'Bloco C' WHERE id = 5;
+
+UPDATE enderecos SET logradouro = 'Rua Itu', completemento = 'Ap 102' WHERE id = 6;
+
+UPDATE enderecos SET completemento = 'Fundos' WHERE id = 8;
+
+UPDATE enderecos SET Cidade = 'Rio Branco', cep = '69.900-162' WHERE id = 9;
+
+UPDATE enderecos SET completemento = 'Casa' WHERE id = 10;
+
+UPDATE enderecos SET completemento = 'Casa' WHERE id = 11;
+
+SELECT id, estado, cidade, bairro, cep, logradouro, numero, complemento FROM enderecos;
 ---------------------------------------------------------------------------------------------------------- Exercício 03
 
+CREATE TABLE champions (
+	id INTEGER PRIMARY KEY IDENTITY (1,1),
+	nome VARCHAR(9),
+	descricao VARCHAR(23),
+	habilidade1 VARCHAR(21),
+	habilidade2 VARCHAR(31),
+	habilidade3 VARCHAR(30),
+	habilidade4 VARCHAR(20),
+	habilidade5 VARCHAR(15));
+
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5) VALUES(
+	'Katarina',
+	'a Lâmina Sinistra',
+	'Voracidade',
+	'Lâmina Saltitante',
+	'Preparação',
+	'Shunpo',
+	'Lótus da Morte');
+
+INSERT INTO champions (nome, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5) VALUES(
+	'Yasuo',
+	'Estilo do Errante',
+	'Tempestade de Aço ',
+	'Parede de Vento',
+	'Espada Ágil',
+	'Último Suspiro');
+
+INSERT INTO champions (nome, descricao, habilidade1) VALUES(
+	'Master Yi ',
+	'o Espadachim Wuju ',
+	'Ataque Duplo ');
+
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5) VALUES(
+	'Vayne',
+	'a Caçadora Noturna ',
+	'Caçadora Noturna',
+	'Rolamento',
+	'Dardos de Prata',
+	'Condenar',
+	'Hora Final');
+
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4) VALUES(
+	'Lee Sin',
+	'o Monge Cego',
+	'Agitação',
+	'Onda Sônica / Ataque Ressonante',
+	'Proteger / Vontade de Ferro',
+	'Tempestade / Mutilar');
+
+INSERT INTO champions (nome, descricao, habilidade1, habilidade3, habilidade4, habilidade5) VALUES(
+	'Vi',
+	'a Defensora de Piltover',
+	'Blindagem',
+	'Pancada Certeira',
+	'Força Excessiva',
+	'Saque e Enterrada');
+
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5) VALUES(
+	'Diana',
+	'o Escárnio da Lua ',
+	'Espada de Prata Lunar',
+	'Golpe Crescente',
+	'Cascata Lívida',
+	'Colapso Minguante',
+	'Zênite Lunar');
+
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5) VALUES(
+	'Annie',
+	'a Criança Sombria ',
+	'Piromania',
+	'Desintegrar',
+	'Incinerar',
+	'Escudo Fundido',
+	'Invocar: Tibbers');
+
+INSERT INTO champions (nome, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5) VALUES(
+	'Aatrox',
+	'Poço de Sangue',
+	'Voo Sombrio ',
+	'Sede de Sangue / Preço em Sangue',
+	'Lâminas da Aflição',
+	'Massacre');
+
+SELECT id, nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5 FROM champions;
+
+UPDATE champions SET descricao = 'o Imperdoável' WHERE id = 2;
+
+UPDATE champions SET habilidade2 = 'Ataque Alpha', habilidade3 = 'Meditar', habilidade4 = 'Eestilo Wuiu', habilidade5 = 'Highlander' WHERE id = 3;
+
+UPDATE champions SET habilidade5 = 'Fúria do Dragão' WHERE id = 5;
+
+UPDATE champions SET habilidade1 = 'Quebra-cofres' WHERE id = 6;
+
+UPDATE champions SET descricao = 'a Espada Darkin' WHERE id = 9;
+
+SELECT id, nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5 FROM champions;
