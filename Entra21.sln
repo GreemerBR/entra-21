@@ -17,7 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Listas", "Listas", "{561A32
 		..\..\..\..\Área de Trabalho\Lista 05 - Orientação a objetos.pdf = ..\..\..\..\Área de Trabalho\Lista 05 - Orientação a objetos.pdf
 		..\..\..\..\Área de Trabalho\Lista 06 - Listas de tipos primitivos.pdf = ..\..\..\..\Área de Trabalho\Lista 06 - Listas de tipos primitivos.pdf
 		..\..\..\..\Área de Trabalho\Lista 07 - Listas de objetos.pdf = ..\..\..\..\Área de Trabalho\Lista 07 - Listas de objetos.pdf
-		..\..\..\..\Downloads\Lista 08 - SQL Insert.pdf = ..\..\..\..\Downloads\Lista 08 - SQL Insert.pdf
+		Listas\Lista 08.1 - SQL Insert.pdf = Listas\Lista 08.1 - SQL Insert.pdf
+		Listas\Lista 08.2 - SQL Select.pdf = Listas\Lista 08.2 - SQL Select.pdf
+		Listas\Lista 08.3 - SQL Update.pdf = Listas\Lista 08.3 - SQL Update.pdf
+		Listas\Lista 08.4 - SQL Delete.pdf = Listas\Lista 08.4 - SQL Delete.pdf
 		..\..\..\..\Área de Trabalho\Lista IF Complementar.pdf = ..\..\..\..\Área de Trabalho\Lista IF Complementar.pdf
 	EndProjectSection
 EndProject
@@ -70,7 +73,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{2C20215E-46E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{865ECDEB-9A50-4160-875E-2BEAEA8DD41A}"
 	ProjectSection(SolutionItems) = preProject
+		Exercícios\SQL\alunos_estrutura_insert.sql = Exercícios\SQL\alunos_estrutura_insert.sql
+		Exercícios\SQL\cidades_estrutura_insert.sql = Exercícios\SQL\cidades_estrutura_insert.sql
 		Exercícios\SQL\Lista08.sql = Exercícios\SQL\Lista08.sql
+		Exercícios\SQL\pokemons_estrutura_insert.sql = Exercícios\SQL\pokemons_estrutura_insert.sql
 	EndProjectSection
 EndProject
 Global
