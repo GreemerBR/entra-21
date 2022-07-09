@@ -5520,7 +5520,7 @@ SELECT cidade
 SELECT estado, cidade
 	FROM cidades
 	WHERE cidade LIKE '%tuba'
-	ORDER BY cidade DESC;
+	ORDER BY estado DESC;
 
 --6. Selecione a cidade que o nome da cidade contenha mais que 15 caracteres, ordenando pelo quantidade de caracteres.
 

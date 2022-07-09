@@ -2002,7 +2002,6 @@ VALUES
 ('Helena Peralta', '257.487.987-27', 'Sezaco', 'Gêmeos', '650', '0.97', '6.1', '0.42', '1.46', 'Prata', '1986-06-05'), 
 ('Fernão Ferreyra', '478.021.038-00', 'Cefawo', 'Gêmeos', '382', '4.72', '6.13', '4.67', '0.17', 'Rosa-escuro', '1997-05-31'), 
 ('Henrique Carrilho', '583.259.615-38', 'Siutui', 'Touro', '9', '6.76', '4.67', '2.2', '5.32', 'Vermelho-tostado', '1981-04-28');
-
 INSERT INTO alunos (nome, cpf, nick, signo, numero_favorito, nota_1, nota_2, nota_3, nota_4, cor_preferida, data_nascimento)
 VALUES
 ('Dinis MontAlverne', '623.874.842-74', 'Xeihe', 'Touro', '152', '6.53', '3.43', '2.99', '5.88', 'Bege', '2007-05-03'), 
@@ -2720,3 +2719,42 @@ VALUES
 ('Ezequiel Mascareñas', '030.871.261-79', 'Gosye', 'Áries', '898', '7.47', '9.69', '2.04', '0.59', 'Negro', '1969-04-04'), 
 ('Délio Carrilho', '805.245.797-17', 'Lalun', 'Touro', '873', '0.11', '5.29', '7.66', '4.42', 'Roxo', '1988-04-30'), 
 ('Justino Betancour', '349.770.422-98', 'Puvofi', 'Touro', '722', '9.57', '4.81', '8.74', '3.26', 'Amarelo-limão', '1968-04-22');
+
+-------------------------------------------------------------------------------------------------------------------------------------
+--LISTA 8.02
+--1. Selecione todas as colunas da tabela.
+
+SELECT id, nome, cpf, nick, signo, numero_favorito, nota_1, nota_2, nota_3, nota_4, cor_preferida, data_nascimento
+	FROM alunos;
+
+--2. Selecione o nome dos alunos que a nota 1 é maior que 9.0.
+
+SELECT nome
+	FROM alunos
+	WHERE nota_1 > 9.0;
+
+--3. Selecione o nome do aluno, nota 1, nota 2, nota 3, nota 4, e a média.
+
+SELECT nome,
+	   nota_1 AS 'Nota 1',
+	   nota_2 AS 'Nota 2',
+	   nota_3 AS 'Nota 3',
+	   nota_4 AS 'Nota 4', 
+	   ((nota_1 + nota_2 + nota_3 + nota_4) / 4) AS 'Média'
+	   FROM alunos;
+
+--4. Contabilize a quantidade de alunos com o signo de Peixes
+
+SELECT COUNT(signo) AS 'Quantidade de alunos com signo de Peixes'
+	FROM alunos
+	WHERE signo LIKE 'Peixes';
+
+--5. Selecione a soma da nota 1
+
+SELECT SUM(nota_1) AS 'Soma da nota 1'
+	FROM alunos;
+
+--6. Selecione a média da nota 2
+
+SELECT FORMAT (AVG(nota_2) 'N2') AS 'Média da nota 2'
+	FROM alunos;
