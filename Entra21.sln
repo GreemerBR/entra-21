@@ -69,6 +69,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{2C20215E-46E1-48B8-877C-7410AFD92634}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql = ..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql
+		Exemplos\SQL\ExemplosSQLTabelasRelacionadas.sql = Exemplos\SQL\ExemplosSQLTabelasRelacionadas.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{865ECDEB-9A50-4160-875E-2BEAEA8DD41A}"
