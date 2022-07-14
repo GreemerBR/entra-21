@@ -29,13 +29,13 @@ CREATE TABLE pedidos(
 	status TINYINT NOT NULL, -- 0 .. 255
 	data_compra DATETIME2,
 	data_criacao DATETIME2 NOT NULL,
-	);
 
-CREATE TABLE pedido_pecas(
+	FOREIGN KEY (id_cliente) REFERENCES clientes(id));
+
+CREATE TABLE pedidos_pecas(
 	id INTEGER PRIMARY KEY IDENTITY(1,1), -- PK
 	id_peca INTEGER NOT NULL, -- FK tabela pecas
 	id_pedido INTEGER NOT NULL, -- FK tabela pedidos
-	
 	quantidade SMALLINT,
 
 	FOREIGN KEY(id_pedido) REFERENCES pedidos(id),
@@ -121,3 +121,26 @@ SELECT
 	INNER JOIN clientes AS c ON(p.id_cliente = c.id);
 
 UPDATE pedidos SET status = 1 WHERE id = 2;
+
+SELECT * FROM pecas;
+
+INSERT INTO pedidos_pecas (id_pedido, id_peca, quantidade) VALUES
+	(1, 2, 2), -- 2 SSD M2 para o pedido 1
+	(1, 4, 1), -- 1	GTX 1060 o pedido 1
+	(1, 6, 1); -- 1 módulo 16GB RAM DDR5 para o pedido 1
+
+-- Alterar o pedido do cliente 1 para o cliente Cry (2)
+UPDATE pedidos SET id_cliente = 2 WHERE id = 1;
+
+-- Consultar apresentando nome cliente, nome peça, quantidade, valor unitário, total peças 
+SELECT
+	pd.id AS 'Código pedido',
+	c.nome AS 'Cliente',
+	p.nome AS 'Peça',
+	pp.quantidade AS 'Quantidade',
+	CONCAT('R$ ' + p.preco_unitario) AS 'Valor unitário',
+	CONCAT('R$ ' + p.preco_unitatio * pp.quantidade) AS 'Total das peças'
+	FROM pedidos_pecas AS pp
+	INNER JOIN pecas AS p ON (pp.id_peca = p.id)
+	INNER JOIN pedidos AS pd ON (pp.id_pedido = pd.id)
+	INNER JOIN clientes AS c ON (pd.id_cliente = c.id);
