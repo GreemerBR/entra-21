@@ -831,10 +831,73 @@ UPDATE pokemons
 	WHERE codigo = 100;
 
 UPDATE pokemons
-	SET nome = REPLACE(nome, 'R', 'C')
-	WHERE nome LIKE 'R%'; -- REVER ESSA QUESTÃO
+SET nome = REPLACE(nome, UPPER('R'), UPPER('C'))
+WHERE nome LIKE 'R%';
 
+UPDATE pokemons
+SET
+    altura = 0.51,
+    peso = 0.70
+    WHERE altura = 0.5;
 
+UPDATE pokemons
+SET
+    codigo = 1,
+    defesa = 1,
+    ataque = 1,
+    especial_ataque = 3,
+    especial_defesa = 4
+    WHERE
+    especial_defesa = 3
+    AND
+    especial_ataque = 4;
+
+UPDATE pokemons
+SET nome = SUBSTRING(1,10)
+    WHERE LENGTH(nome) > 10;
+
+UPDATE pokemons
+SET categoria = 'water'
+    WHERE descricao = '%flames%';
+       
+UPDATE pokemons
+SET codigo = '151'
+    WHERE codigo = '155';
+
+UPDATE pokemons
+SET
+    nome = 'Naruto',
+    ataque = 1
+    WHERE nome = 'Kabuto';
+
+UPDATE pokemons
+SET
+    nome = 'Sasuke',
+    especial_ataque = 8002,
+    ataque = 8001
+WHERE
+    nome = 'Mew' AND nome = 'Mewtwo';
+   
+UPDATE pokemons
+SET
+    descricao = 'Lorem ipsum.',
+    nome = 'Tyranitar',
+    categoria = 'Wood Gecko'
+    WHERE CAST (codigo AS DOUBLE) =
+    (SELECT codigo FROM pokemons WHERE (CAST(codigo AS DOUBLE) % 2) = 0);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--LISTA 8.03
+
+DELETE FROM pokemons
+WHERE categoria = 'Seed';
+   
+DELETE FROM pokemons
+WHERE nome LIKE 'Nid%';
+
+UPDATE pokemons
+SET nome = CONCAT('C', RIGHT(nome, LENGTH(nome ) -1)
+WHERE nome LIKE 'R%';
 
 DROP TABLE pokemons;
 
