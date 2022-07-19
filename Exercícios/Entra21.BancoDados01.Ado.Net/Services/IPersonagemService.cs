@@ -2,7 +2,7 @@
 
 namespace Entra21.BancoDados01.Ado.Net.Services
 {
-    internal interface IPersonagemService // GREG
+    internal interface IPersonagemService
     {
         List<Personagem> ObterTodos();
         Personagem ObterPorId(int id);

@@ -1,4 +1,4 @@
-using Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens;
+using Entra21.BancoDados01.Ado.Net.Views;
 
 namespace Entra21.BancoDados01.Ado.Net
 {
@@ -8,7 +8,7 @@ namespace Entra21.BancoDados01.Ado.Net
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new TipoPersonagemListagemForm());
+            Application.Run(new MenuPrincipalForm());
         }
     }
 }

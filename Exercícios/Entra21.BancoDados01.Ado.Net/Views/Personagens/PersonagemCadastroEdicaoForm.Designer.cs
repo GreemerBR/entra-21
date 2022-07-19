@@ -51,7 +51,7 @@
             // 
             this.textBoxNome.Location = new System.Drawing.Point(12, 27);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(288, 23);
+            this.textBoxNome.Size = new System.Drawing.Size(349, 23);
             this.textBoxNome.TabIndex = 1;
             // 
             // labelEditora
@@ -74,10 +74,11 @@
             // 
             // comboBoxEditora
             // 
+            this.comboBoxEditora.DisplayMember = "Nome";
             this.comboBoxEditora.FormattingEnabled = true;
             this.comboBoxEditora.Location = new System.Drawing.Point(12, 84);
             this.comboBoxEditora.Name = "comboBoxEditora";
-            this.comboBoxEditora.Size = new System.Drawing.Size(288, 23);
+            this.comboBoxEditora.Size = new System.Drawing.Size(349, 23);
             this.comboBoxEditora.TabIndex = 4;
             // 
             // comboBoxTipoPersonagem
@@ -86,21 +87,22 @@
             this.comboBoxTipoPersonagem.FormattingEnabled = true;
             this.comboBoxTipoPersonagem.Location = new System.Drawing.Point(12, 141);
             this.comboBoxTipoPersonagem.Name = "comboBoxTipoPersonagem";
-            this.comboBoxTipoPersonagem.Size = new System.Drawing.Size(288, 23);
+            this.comboBoxTipoPersonagem.Size = new System.Drawing.Size(349, 23);
             this.comboBoxTipoPersonagem.TabIndex = 5;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(144, 201);
+            this.buttonCancelar.Location = new System.Drawing.Point(205, 183);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(225, 201);
+            this.buttonSalvar.Location = new System.Drawing.Point(286, 183);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
             this.buttonSalvar.TabIndex = 7;
@@ -112,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 236);
+            this.ClientSize = new System.Drawing.Size(373, 217);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.comboBoxTipoPersonagem);

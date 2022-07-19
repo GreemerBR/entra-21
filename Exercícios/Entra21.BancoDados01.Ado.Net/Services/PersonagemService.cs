@@ -5,7 +5,7 @@ using System.Data;
 namespace Entra21.BancoDados01.Ado.Net.Services
 {
     // Pode criar a classe PersonagemService e então colocar o " : IPersonagemService " junto do internal class e então fazer o ctrl .
-    internal class PersonagemService : IPersonagemService // GREG
+    internal class PersonagemService : IPersonagemService
     {
         public void Apagar(int id)
         {
