@@ -162,6 +162,7 @@
             this.Controls.Add(this.labelQuantidadeHabitantes);
             this.Controls.Add(this.labelNome);
             this.Name = "CidadeCadastroEdicaoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro e Edição de Cidade";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,10 +12,11 @@ namespace Entra21.BancoDados01.Ado.Net.DataBase
 
             // String que contém o caminho para o banco de dados, o que
             // permitirá conectar ao banco de dados
-            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\Server\c#-noturno\gregory.zimmer\Desktop\ExemploBancoDados01AdoNet.mdf;Integrated Security=True;Connect Timeout=30";
+            var nomeBanco = "BancoDados";
+            var caminhoCompleto = Directory.GetCurrentDirectory().Substring(0, AppContext.BaseDirectory.LastIndexOf("\\bin"));
 
             // Definir o caminho da conexão para o SqlConnection
-            conexao.ConnectionString = connectionString;
+            conexao.ConnectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={caminhoCompleto}\Database\{nomeBanco}.mdf;Integrated Security=True";
 
             // Abrir a conexão com o banco de dados
             conexao.Open();

@@ -25,7 +25,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
             comando.CommandText = "INSERT INTO cidades (id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib) " +
-                "VALUES (@ID, @ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABITANTES, @DATA_HORA_FUNDACAO, @PIB);";
+                "VALUES (@ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABITANTES, @DATA_HORA_FUNDACAO, @PIB);";
 
             comando.Parameters.AddWithValue("@IDUNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", cidade.Nome);
