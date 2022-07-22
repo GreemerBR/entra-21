@@ -22,6 +22,10 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Cidades
 
             textBoxNome.Text = cidade.Nome;
 
+            textBoxQuantidadeHabitantes.Text = cidade.QuantidadeHabitantes.ToString();
+
+            textBoxPib.Text = cidade.Pib.ToString();
+
             for (var i = 0; i < comboBoxUnidadeFederativa.Items.Count; i++)
             {
                 var tipoUnidadeFederativaPercorrido = comboBoxUnidadeFederativa.Items[i] as UnidadeFederativa;

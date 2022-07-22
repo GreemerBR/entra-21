@@ -24,12 +24,12 @@ namespace Entra21.BancoDados01.Ado.Net.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "INSERT INTO cidades (id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib) " +
-                "VALUES (@ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABITANTES, @DATA_HORA_FUNDACAO, @PIB);";
+            comando.CommandText = @"INSERT INTO cidades (id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib)
+VALUES (@ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABITANTES, @DATA_HORA_FUNDACAO, @PIB);";
 
-            comando.Parameters.AddWithValue("@IDUNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
+            comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", cidade.Nome);
-            comando.Parameters.AddWithValue("@QUANTIDA_DEHABITANTES", cidade.QuantidadeHabitantes);
+            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.QuantidadeHabitantes);
             comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.DataHoraFundacao);
             comando.Parameters.AddWithValue("@PIB", cidade.Pib);
 
@@ -47,9 +47,9 @@ namespace Entra21.BancoDados01.Ado.Net.Services
                 "quantidade_habitantes = @QUANTIDADE_HABITANTES, data_hora_fundacao = @DATA_HORA_FUNDACAO, pib = @PIB WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", cidade.Id);
-            comando.Parameters.AddWithValue("@IDUNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
+            comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", cidade.Nome);
-            comando.Parameters.AddWithValue("@QUANTIDA_DEHABITANTES", cidade.QuantidadeHabitantes);
+            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.QuantidadeHabitantes);
             comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.DataHoraFundacao);
             comando.Parameters.AddWithValue("@PIB", cidade.Pib);
 
@@ -63,7 +63,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             var conexao = new Conexao().Conectar();
 
             var comando = conexao.CreateCommand();
-            comando.CommandText = "SELECT id, id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib" +
+            comando.CommandText = "SELECT id, id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib " +
                 "FROM cidades WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", id);
@@ -80,11 +80,13 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             var cidade = new Cidade();
 
             cidade.Id = Convert.ToInt32(primeiroRegistro["id"]);
-            cidade.UnidadeFederativa.Id = Convert.ToInt32(primeiroRegistro["id_unidade_federativa"]);
             cidade.Nome = primeiroRegistro["nome"].ToString();
             cidade.QuantidadeHabitantes = Convert.ToInt32(primeiroRegistro["quantidade_habitantes"]);
             cidade.DataHoraFundacao = Convert.ToDateTime(primeiroRegistro["data_hora_fundacao"]);
             cidade.Pib = Convert.ToDouble(primeiroRegistro["pib"]);
+
+            cidade.UnidadeFederativa = new UnidadeFederativa();
+            cidade.UnidadeFederativa.Id = Convert.ToInt32(primeiroRegistro["id_unidade_federativa"]);
 
             comando.Connection.Close();
 
@@ -97,8 +99,16 @@ namespace Entra21.BancoDados01.Ado.Net.Services
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "SELECT id, id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib" +
-                "FROM cidades WHERE id = @ID";
+            comando.CommandText = @"SELECT
+c.id AS 'id',
+c.nome AS 'nome',
+c.quantidade_habitantes AS 'quantidade_habitantes',
+c.data_hora_fundacao AS 'data_hora_fundacao',
+c.pib AS 'pib',
+uf.id AS 'unidade_federativa_id',
+uf.sigla AS 'sigla'
+FROM cidades AS c
+INNER JOIN unidades_federativas AS uf ON(c.id_unidade_federativa = uf.id)";
 
             var tabelaEmMemoria = new DataTable();
 
@@ -111,16 +121,18 @@ namespace Entra21.BancoDados01.Ado.Net.Services
                 var linha = tabelaEmMemoria.Rows[i];
 
                 var cidade = new Cidade();
-
                 cidade.Id = Convert.ToInt32(linha["id"]);
-                cidade.UnidadeFederativa.Id = Convert.ToInt32(linha["id_unidade_federativa"]);
                 cidade.Nome = linha["nome"].ToString();
                 cidade.QuantidadeHabitantes = Convert.ToInt32(linha["quantidade_habitantes"]);
                 cidade.DataHoraFundacao = Convert.ToDateTime(linha["data_hora_fundacao"]);
                 cidade.Pib = Convert.ToDouble(linha["pib"]);
 
+                cidade.UnidadeFederativa = new UnidadeFederativa();
+                cidade.UnidadeFederativa.Id = Convert.ToInt32(linha["unidade_federativa_id"]);
+                cidade.UnidadeFederativa.Sigla = linha["sigla"].ToString();
+
                 cidades.Add(cidade);
-            }   
+            }
 
             comando.Connection.Close();
 

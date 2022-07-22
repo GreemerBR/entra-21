@@ -44,23 +44,26 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Cidades
                 MessageBox.Show("Selecione uma cidade para apagar!", "Aviso", MessageBoxButtons.OK);
                 return;
             }
-            
+
             var resposta = MessageBox.Show("Deseja apagar a cidade?", "Aviso", MessageBoxButtons.YesNo);
 
             if (resposta != DialogResult.Yes)
             {
                 MessageBox.Show("A cidade permanece na lista!", "Aviso", MessageBoxButtons.OK);
             }
+            else
+            {
 
-            var linhaSelecionada = dataGridView1.SelectedRows[0];
+                var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+                var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            _cidadeService.Apagar(id);
+                _cidadeService.Apagar(id);
 
-            PreencherDataGridViewComCidades();
+                PreencherDataGridViewComCidades();
 
-            MessageBox.Show("Cidade removida com sucesso!", "Aviso", MessageBoxButtons.OK); ;
+                MessageBox.Show("Cidade removida com sucesso!", "Aviso", MessageBoxButtons.OK);
+            }
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)
@@ -92,6 +95,4 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Cidades
             PreencherDataGridViewComCidades();
         }
     }
-
-   
 }

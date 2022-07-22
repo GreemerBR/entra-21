@@ -110,9 +110,11 @@
             // 
             // dateTimePickerDataHoraFundacao
             // 
-            this.dateTimePickerDataHoraFundacao.Location = new System.Drawing.Point(58, 173);
+            this.dateTimePickerDataHoraFundacao.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dateTimePickerDataHoraFundacao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDataHoraFundacao.Location = new System.Drawing.Point(103, 174);
             this.dateTimePickerDataHoraFundacao.Name = "dateTimePickerDataHoraFundacao";
-            this.dateTimePickerDataHoraFundacao.Size = new System.Drawing.Size(251, 23);
+            this.dateTimePickerDataHoraFundacao.Size = new System.Drawing.Size(159, 23);
             this.dateTimePickerDataHoraFundacao.TabIndex = 10;
             // 
             // buttonSalvar

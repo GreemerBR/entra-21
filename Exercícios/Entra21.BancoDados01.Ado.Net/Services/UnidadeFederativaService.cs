@@ -43,7 +43,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
 
             comando.Parameters.AddWithValue("@ID", unidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", unidadeFederativa.Nome);
-            comando.Parameters.AddWithValue("@PIB", unidadeFederativa.Sigla);
+            comando.Parameters.AddWithValue("@SIGLA", unidadeFederativa.Sigla);
 
             comando.ExecuteNonQuery();
 
@@ -85,7 +85,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "SELECT id, nome, sigla FROM unidades_federativas WHERE id = @ID";
+            comando.CommandText = "SELECT id, nome, sigla FROM unidades_federativas";
 
             var tabelaEmMemoria = new DataTable();
 

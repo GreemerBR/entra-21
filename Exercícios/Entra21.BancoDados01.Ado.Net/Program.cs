@@ -8,7 +8,7 @@ namespace Entra21.BancoDados01.Ado.Net
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new MenuPrincipalForm());
+            Application.Run(new MenuPrincipalCidadesUfForm());
         }
     }
 }
