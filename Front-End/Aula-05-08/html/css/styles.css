@@ -1,0 +1,28 @@
+body{
+    background: rgb(196, 91, 189);
+    color: blueviolet;
+}
+p{
+    font-size: 20px;
+    color: blue;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    background: white;
+    color: green;
+    border: 1px solid green;
+    font-size: 12px;
+    /*padding: 10px 5px 20px 15px; /* Top, right, bottom, left*/
+    /*padding: 10px 5px 20px; /* Top, right e left, bottom*/
+    padding: 10px 5px; /* Top e bottom, right e left*/
+    /*padding: 10px; /* all*/
+    border-radius: 5px;
+}
+
+a:hover{
+    background: green;
+    color: white;
+}
